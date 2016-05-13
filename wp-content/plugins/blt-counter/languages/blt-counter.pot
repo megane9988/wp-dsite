@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: blt-counter\n"
+"POT-Creation-Date: 2013-08-07 10:11+0900\n"
+"PO-Revision-Date: 2013-08-07 10:12+0900\n"
+"Last-Translator: shoshirasaka <sho.shirasaka@gmail.com>\n"
+"Language-Team: shoshirasaka <sho.shirasaka@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+
+#: blt-counter/blt-counter.php:66
+msgid ""
+"Show total value influence of SNS(hatena Bookmark, Facebook Like and Tweets) "
+"at anywhere."
+msgstr ""
