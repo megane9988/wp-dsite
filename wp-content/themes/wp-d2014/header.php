@@ -27,6 +27,13 @@
 	<?php endif; ?>
 </head>
 <body <?php body_class(); ?>>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2866035444666228",
+    enable_page_level_ads: true
+  });
+</script>
 	<div class="contain-to-grid">
 		<nav class="top-bar" data-topbar="">
 			<ul class="title-area">
