@@ -57,9 +57,6 @@ class List_Table extends \WP_List_Table {
 		if ( 'top' === $which ) {
 			echo $this->filters_form(); // xss ok
 		}
-		if ( 'bottom' === $which ) {
-			echo $this->record_actions_form(); // xss ok
-		}
 	}
 
 	function no_items() {
@@ -276,8 +273,8 @@ class List_Table extends \WP_List_Table {
 					$user->get_avatar_img( 80 ),
 					$user->get_display_name(),
 					$user->is_deleted() ? sprintf( '<br /><small class="deleted">%s</small>', esc_html__( 'Deleted User', 'stream' ) ) : '',
-					$user->get_role() ? sprintf( '<br /><small>%s</small>', $user->get_role() ) : '',
-					$user->get_agent() ? sprintf( '<br /><small>%s</small>', $user->get_agent_label( $user->get_agent() ) ) : ''
+					sprintf( '<br /><small>%s</small>', $user->get_role() ),
+					sprintf( '<br /><small>%s</small>', $user->get_agent_label( $user->get_agent() ) )
 				);
 				break;
 
@@ -346,7 +343,11 @@ class List_Table extends \WP_List_Table {
 				}
 		}
 
-		echo $out; // xss ok
+		$allowed_tags = wp_kses_allowed_html( 'post' );
+		$allowed_tags['time'] = array( 'datetime' => true, 'class' => true );
+		$allowed_tags['img']['srcset'] = true;
+
+		echo wp_kses( $out, $allowed_tags );
 	}
 
 	public function get_action_links( $record ) {
@@ -453,7 +454,13 @@ class List_Table extends \WP_List_Table {
 			$total_users = $user_count['total_users'];
 
 			if ( $total_users > $this->plugin->admin->preload_users_max ) {
-				return array();
+				$selected_user = wp_stream_filter_input( INPUT_GET, 'user_id' );
+				if ( $selected_user ) {
+					$user = new Author( $selected_user );
+					return array( $selected_user => $user->get_display_name() );
+				} else {
+					return array();
+				}
 			}
 
 			$users = array_map(
@@ -462,6 +469,17 @@ class List_Table extends \WP_List_Table {
 				},
 				get_users( array( 'fields' => 'ID' ) )
 			);
+
+			if ( is_multisite() && is_super_admin() ) {
+				$super_admins = array_map(
+					function( $login ) {
+						$user = get_user_by( 'login', $login );
+						return new Author( $user->ID );
+					},
+					get_super_admins()
+				);
+				$users = array_unique( array_merge( $users, $super_admins ) );
+			}
 
 			$users[] = new Author( 0, array( 'is_wp_cli' => true ) );
 
@@ -551,13 +569,19 @@ class List_Table extends \WP_List_Table {
 	}
 
 	function filters_form() {
-		$user_id = get_current_user_id();
 		$filters = $this->get_filters();
 
 		$filters_string  = sprintf( '<input type="hidden" name="page" value="%s" />', 'wp_stream' );
 		$filters_string .= sprintf( '<span class="filter_info hidden">%s</span>', esc_html__( 'Show filter controls via the screen options tab above.', 'stream' ) );
 
 		foreach ( $filters as $name => $data ) {
+
+			$data = wp_parse_args( $data, array(
+				'title' => '',
+				'items' => array(),
+				'ajax'  => false,
+			) );
+
 			if ( 'date' === $name ) {
 				$filters_string .= $this->filter_date( $data['items'] );
 			} else {
@@ -596,11 +620,14 @@ class List_Table extends \WP_List_Table {
 					// Sort top-level items by label
 					array_multisort( $labels, SORT_ASC, $data['items'] );
 
-					// Ouput a hidden input to handle the connector value
-					$filters_string .= '<input type="hidden" name="connector" class="record-filter-connector" />';
+					// Output a hidden input to handle the connector value
+					$filters_string .= sprintf(
+						'<input type="hidden" name="connector" class="record-filter-connector" value="%s" />',
+						esc_attr( wp_stream_filter_input( INPUT_GET, 'connector' ) )
+					);
 				}
 
-				$filters_string .= $this->filter_select( $name, $data['title'], $data['items'] );
+				$filters_string .= $this->filter_select( $name, $data['title'], $data['items'], $data['ajax'] );
 			}
 		}
 
@@ -812,7 +839,19 @@ class List_Table extends \WP_List_Table {
 			);
 		}
 		echo '</select></div>';
+		wp_nonce_field( 'stream_record_actions_nonce', 'stream_record_actions_nonce' );
+
+		printf( '<input type="hidden" name="page" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'page' ) ) );
+		printf( '<input type="hidden" name="date_predefined" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'date_predefined' ) ) );
+		printf( '<input type="hidden" name="date_from" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'date_from' ) ) );
+		printf( '<input type="hidden" name="date_to" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'date_to' ) ) );
+		printf( '<input type="hidden" name="user_id" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'user_id' ) ) );
+		printf( '<input type="hidden" name="connector" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'connector' ) ) );
+		printf( '<input type="hidden" name="context" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'context' ) ) );
+		printf( '<input type="hidden" name="action" value="%s">', esc_attr( wp_stream_filter_input( INPUT_GET, 'action' ) ) );
+
 		printf( '<input type="submit" name="" id="record-actions-submit" class="button" value="%s">', esc_attr__( 'Apply', 'stream' ) );
+		echo '<div class="clear"></div>';
 
 		return ob_get_clean();
 	}
@@ -822,8 +861,11 @@ class List_Table extends \WP_List_Table {
 
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';
 		echo $this->filter_search(); // xss ok
-
 		parent::display();
+		echo '</form>';
+
+		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-actions-form">';
+		echo $this->record_actions_form(); // xss ok
 		echo '</form>';
 	}
 

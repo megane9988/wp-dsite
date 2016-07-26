@@ -1,10 +1,10 @@
 === VK Post Author Display ===
-Contributors: kurudrive,dswebstudio
+Contributors: kurudrive,dswebstudio,mypacecreator,gatespace
 Donate link:
 Tags: post,author
 Requires at least: 3.3
-Tested up to: 4.4.2
-Stable tag: 0.3.3.0
+Tested up to: 4.5.3
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,6 @@ Display to Post Author Information Box on bottom of the contents.
 == Frequently asked questions ==
 
 
-
 == Screenshots ==
 
 1. Display to post author information with latest entries box on bottom of the contents.
@@ -31,89 +30,61 @@ Display to Post Author Information Box on bottom of the contents.
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.2.0 =
 
-* beta version first release.
+* Add Original Picture upload
+* Add Profile Picture style
+* Add filter display post types
 
-= 0.1.1 =
+= 1.1.0 =
 
-* display only single.php
+* Change Setting Page UI
 
-= 0.1.1.5 =
+= 1.0.0 =
 
-* test up date
+* Add SNS icons
+* Category color support
+* Design tuning
 
-= 0.2.0.0 =
+= 0.3.3.0 =
 
-* Show Latest entries & twitter link
-
-= 0.3.0.0 =
-
-* Show Thumbnail and select show-hide thumbnail
-
-= 0.3.0.1 =
-
-* test up date
-
-= 0.3.0.2 =
-
-* Retry update
-
-= 0.3.0.3 =
-
-* Layout Bug fix
-
-= 0.3.1.0 =
-
-* Add filter at css file path
-
-= 0.3.1.1 =
-
-* Layout Bug fix
-
-= 0.3.1.2 =
-
-* Layout Bug fix
-
-= 0.3.1.3 =
-
-* Layout Bug fix
-
-= 0.3.1.4 =
-
-* Layout tuning & add screenshots
-
-= 0.3.1.5 =
-
-* Bug fix
-
-= 0.3.1.6 =
-
-* Bug fix
-
-= 0.3.1.7 =
-
-* Bug fix
-
-= 0.3.2.0 =
-
-* Add Original thumbnail size
-
-= 0.3.2.1 =
-
-* Bug fix
-
-= 0.3.2.2 =
-
-* Bug(thumnail no image) fix
+* Add author link
 
 = 0.3.2.3 =
 
 * Change author url
 
-= 0.3.3.0 =
+= 0.3.2.0 =
 
-* Add author link
+* Add Original thumbnail size
+
+= 0.3.1.4 =
+
+* Layout tuning & add screenshots
+
+= 0.3.1.0 =
+
+* Add filter at css file path
+
+= 0.3.0.3 =
+
+* Layout Bug fix
+
+= 0.3.0.0 =
+
+* Show Thumbnail and select show-hide thumbnail
+
+= 0.2.0.0 =
+
+* Show Latest entries & twitter link
+
+= 0.1.1 =
+
+* display only single.php
+
+= 0.1.0 =
+
+* beta version first release.
 
 == Upgrade notice ==
 

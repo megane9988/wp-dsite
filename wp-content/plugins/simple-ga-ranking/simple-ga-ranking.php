@@ -2,14 +2,14 @@
 /*
 Plugin Name: Simple GA Ranking
 Author: Horike Takahiro
-Plugin URI: https://github.com/horike37/simple-ga-ranking
+Plugin URI: http://simple-ga-ranking.org
 Description: Ranking plugin using data from google analytics.
-Version: 2.0.4
-Author URI: https://github.com/horike37/simple-ga-ranking
+Version: 2.0.5
+Author URI: http://simple-ga-ranking.org
 Domain Path: /languages
 Text Domain:
 
-Copyright 2013 horike takahiro (email : horike37@gmail.com)
+Copyright 2016 horike takahiro (email : horike37@gmail.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
