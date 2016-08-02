@@ -3,7 +3,7 @@
 Plugin Name: VK Post Author Display
 Plugin URI: http://wordpress.org/extend/plugins/vk-post-author-display/
 Description: Show post author information at post bottom.
-Version: 1.2.0
+Version: 1.2.1
 Author: Vektor,Inc.
 Author URI: http://ex-unit.vektor-inc.co.jp/
 Text Domain : post-author-display
@@ -50,10 +50,21 @@ define( 'VK_PAD_BASENAME', plugin_basename( __FILE__ ) );
 define( 'VK_PAD_URL', plugin_dir_url( __FILE__ ) );
 define( 'VK_PAD_DIR', plugin_dir_path( __FILE__ ) );
 
-require_once( VK_PAD_DIR . 'inc/class.term_color.php' );
-require_once( VK_PAD_DIR . 'view.post-author.php' );
+/*-------------------------------------------*/
+/*	vk post author text domain load
+/*-------------------------------------------*/
+function pad_text_domain() {
+	load_plugin_textdomain( 'post-author-display', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'init', 'pad_text_domain' );
+
+require_once( VK_PAD_DIR . 'inc/term-color-config.php' );
 require_once( VK_PAD_DIR . 'inc/vk-admin-config.php' );
+require_once( VK_PAD_DIR . 'view.post-author.php' );
 require_once( VK_PAD_DIR . 'admin-profile.php' );
+
+
+// _e('aaaaa','post-author-display');
 
 	// Add a link to this plugin's settings page
 function pad_set_plugin_meta( $links ) { 
@@ -63,13 +74,7 @@ function pad_set_plugin_meta( $links ) {
 }
  add_filter('plugin_action_links_'.VK_PAD_BASENAME , 'pad_set_plugin_meta', 10, 1);
 
-/*-------------------------------------------*/
-/*	vk post author text domain load
-/*-------------------------------------------*/
-function pad_text_domain() {
-	load_plugin_textdomain( 'post-author-display', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-}
-add_action( 'init', 'pad_text_domain' );
+
 
 /*-------------------------------------------*/
 /*	Display post author unit
