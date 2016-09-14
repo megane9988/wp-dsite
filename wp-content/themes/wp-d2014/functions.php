@@ -82,6 +82,7 @@ endif;
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 		'name'          => 'サイドバー',
+		'id'            => 'footer01',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4>',

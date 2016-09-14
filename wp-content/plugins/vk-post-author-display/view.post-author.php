@@ -78,10 +78,10 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 
 		public static function pad_get_author_entries(  ){
 			$options         = pad_get_plugin_options();
-			$list_box_title  = $options['list_box_title'];
-			$thumbnail       = $options['show_thumbnail'];
-			$author_link     = $options['author_archive_link'];
-			$author_link_txt = $options['author_archive_link_txt'];
+			$list_box_title  = ( isset( $options['list_box_title'] ) ) ? $options['list_box_title']:'';
+			$thumbnail       = ( isset( $options['show_thumbnail'] ) ) ? $options['show_thumbnail']:'';
+			$author_link     = ( isset( $options['author_archive_link'] ) ) ? $options['author_archive_link']:'';
+			$author_link_txt = ( isset( $options['author_archive_link_txt'] ) ) ? $options['author_archive_link_txt']:'';
 
 			// author entries
 			global $post;
@@ -117,11 +117,17 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 					if ( has_post_thumbnail()) {
 						//allows display of pad_thumb only if selected in pad options
 						$sizes_available = get_intermediate_image_sizes();
-						$pad_thumb = get_the_post_thumbnail( get_the_ID(), 'pad_thumb' );
-						if ( in_array( 'pad_thumb', $sizes_available) && !empty($pad_thumb) )
-							$entryUnit .= $pad_thumb;
-						else
-							$entryUnit .=  get_the_post_thumbnail();
+
+						if ( in_array( 'pad_thumb', $sizes_available) ) {
+							$pad_thumb = get_the_post_thumbnail( get_the_ID(), 'pad_thumb' );
+						} elseif ( in_array( 'post-thumbnail', $sizes_available) ) {
+							$pad_thumb = get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' );
+						} else {
+							$pad_thumb = get_the_post_thumbnail( get_the_ID(), 'thumbnail' );
+						}
+						
+						$entryUnit .= $pad_thumb;
+
 					} else {
 						$entryUnit .= '<img src="'.plugins_url().'/vk-post-author-display/images/thumbnailDummy.jpg" alt="'.get_the_title().'" />';
 					}
@@ -130,12 +136,13 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 				endwhile;
 			$entryUnit .= '</ul>'."\n";
 			$entryUnit .= '</div>'."\n";
+			/* トップページが固定ページで is_page() でも pad を使おうとすると wp_reset_query() があるとthe_post_thumbnailが誤動作する */
 			wp_reset_query(); // important!!
 			return $entryUnit;
 		}
 
 		public static function pad_get_author_box( $layout = 'normal' ){
-			$author_unit = '<div class="padSection">';
+			$author_unit = '<div class="padSection" id="padSection">';
 
 			if ( $layout != 'author_archive' )
 				$author_unit .= '<h4>'.esc_html( get_pad_options('author_box_title') ).'</h4>';

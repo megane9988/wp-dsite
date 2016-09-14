@@ -3,7 +3,7 @@
 Plugin Name: VK Post Author Display
 Plugin URI: http://wordpress.org/extend/plugins/vk-post-author-display/
 Description: Show post author information at post bottom.
-Version: 1.2.2
+Version: 1.3.8
 Author: Vektor,Inc.
 Author URI: http://ex-unit.vektor-inc.co.jp/
 Text Domain : post-author-display
@@ -62,6 +62,7 @@ require_once( VK_PAD_DIR . 'inc/term-color-config.php' );
 require_once( VK_PAD_DIR . 'inc/vk-admin-config.php' );
 require_once( VK_PAD_DIR . 'view.post-author.php' );
 require_once( VK_PAD_DIR . 'admin-profile.php' );
+require_once( VK_PAD_DIR . 'hide_controller.php' );
 
 
 // _e('aaaaa','post-author-display');
@@ -76,17 +77,31 @@ function pad_set_plugin_meta( $links ) {
 
 
 
+function pad_display_post_types(){
+	// $post_types = get_post_types( $args, $output, $operator );
+	$post_types = apply_filters( 'pad_display_post_types', array('post') );
+	return $post_types;
+}
+
 /*-------------------------------------------*/
 /*	Display post author unit
 /*-------------------------------------------*/
 add_filter( 'the_content', 'pad_add_author');
 function pad_add_author($content){
+	// if ( ( is_single() || is_page() ) && !is_front_page() ){
 	if ( is_single() ){
-		$post_types = apply_filters( 'pad_display_post_types', array('post') );
+		$post_types = pad_display_post_types();
 		foreach ($post_types as $key => $value) {
 			if ( get_post_type() == $value ){
-				$author_unit = Vk_Post_Author_Box::pad_get_author_box();
-				$content = $content.$author_unit;
+				global $post;
+				$hidden = apply_filters( 
+					'pad_hide_post_author_custom', 
+					get_post_meta( $post->ID,'pad_hide_post_author',true )
+					);
+				if ( !$hidden ){
+					$author_unit = Vk_Post_Author_Box::pad_get_author_box();
+					$content = $content.$author_unit;
+				}
 			}
 		}
 	}
@@ -195,27 +210,28 @@ function get_pad_options($optionLabel) {
 function pad_plugin_special_thumbnail() {
 
 	$options 		 = pad_get_plugin_options();
-	$default_options = pad_get_default_options();
+	// $default_options = pad_get_default_options();
 
-	if( $options['generate_thumbnail'] != $default_options['generate_thumbnail'] ) {
+	// Case of use PAD image size 
+	if( isset( $options['generate_thumbnail'] ) && $options['generate_thumbnail'] == 'yes' ) {
 
 		if ( function_exists( 'add_theme_support' ) ) {
 			add_theme_support( 'post-thumbnails' );
 			//custom thumbnail for pad plugin
 			add_image_size( 'pad_thumb', 240, 135, array('center', 'center') );
 		}
-	}
-	else {
-		apply_filters('intermediate_image_sizes', 'pad_plugin_disable_thumbnail');
-	}
+	} 
+	// else {
+	// 	apply_filters('intermediate_image_sizes', 'pad_plugin_disable_thumbnail');
+	// }
 }
-
-pad_plugin_special_thumbnail();
-
+add_action('after_setup_theme', 'pad_plugin_special_thumbnail');
 
 /*-------------------------------------------*/
-/*	vk post author disable custom size thumbnail
+/*	Unset pad custom size thumbnail
 /*-------------------------------------------*/
-function pad_plugin_disable_thumbnail( $sizes ) {
-	unset( $sizes['pad_thumb'] );
-}
+// function pad_plugin_disable_thumbnail( $sizes ) {
+// 	if ( isset( $sizes['pad_thumb'] ) ){
+// 		unset( $sizes['pad_thumb'] );
+// 	}
+// }
