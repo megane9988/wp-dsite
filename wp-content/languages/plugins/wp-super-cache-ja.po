@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP Super Cache - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-11-28 08:32:14+0000\n"
+"PO-Revision-Date: 2016-12-04 02:47:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1190,6 +1190,10 @@ msgstr "投稿や固定ページの公開、または更新時にすべてのキ
 #: wp-cache.php:1059
 msgid "Remove UTF8/blog charset support from .htaccess file. Only necessary if you see odd characters or punctuation looks incorrect. Requires rewrite rules update."
 msgstr ".htaccess ファイルから UTF8 やブログの文字コードを削除。文字化けや誤った句読点が表示される場合のみ選択してください。rewrite ルールの更新が必要です。"
+
+#: wp-cache.php:1057
+msgid "Mobile Prefixes"
+msgstr "モバイル端末の局番"
 
 #: wp-cache.php:1057
 msgid "Mobile Browsers"

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Jetpack by WordPress.com - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-11-29 05:32:03+0000\n"
+"PO-Revision-Date: 2017-01-04 06:38:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,94 @@ msgstr ""
 "X-Generator: GlotPress/2.3.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Jetpack by WordPress.com - Stable (latest release)\n"
+
+#: modules/custom-css.php:31
+msgid "Option deleted, re-migrate via `wp jetpack custom-css migrate`."
+msgstr "オプションは削除されました。wp jetpack custom-css migrate` を通して再移管してください。"
+
+#: modules/custom-css/migrate-to-core.php:80
+#: modules/custom-css/migrate-to-core.php:84
+#: modules/custom-css/migrate-to-core.php:87
+msgid "CSS Migrated from Jetpack:"
+msgstr "Jetpack から移行された CSS"
+
+#: modules/custom-css/custom-css-4.7.php:896
+msgid "Switch"
+msgstr "切り替え"
+
+#: modules/custom-css/custom-css-4.7.php:883
+#: modules/custom-css/custom-css-4.7.php:891
+msgid "(modified %s ago)"
+msgstr "(%s前に編集)"
+
+#: modules/custom-css/custom-css-4.7.php:875
+msgid "Select a theme&hellip;"
+msgstr "テーマを選択&hellip;"
+
+#: modules/custom-css/custom-css-4.7.php:873
+msgid "Would you like to view the revisions of another theme instead?"
+msgstr "他のテーマの履歴を表示したいですか ?"
+
+#: modules/custom-css/custom-css-4.7.php:584
+msgid "Don't use the theme's original CSS."
+msgstr "テーマのオリジナル CSS を使用しない。"
+
+#: modules/custom-css/custom-css-4.7.php:577
+msgid "Media Width"
+msgstr "メディア幅"
+
+#: modules/custom-css/custom-css-4.7.php:280
+msgctxt "Toolbar button to get help with custom CSS"
+msgid "Help"
+msgstr "ヘルプ"
+
+#: modules/custom-css/custom-css-4.7.php:279
+msgctxt "Toolbar button to see full CSS revision history"
+msgid "See full history"
+msgstr "全履歴を表示"
+
+#: modules/custom-css/custom-css-4.7.php:277
+msgid "On Mobile"
+msgstr "モバイル上"
+
+#: modules/custom-css/custom-css-4.7.php:276
+msgid "Start Fresh"
+msgstr "最初から始める"
+
+#: modules/custom-css/custom-css-4.7.php:266
+msgid " The default content width for the <strong>%s</strong> theme is %d pixels."
+msgstr "<strong>%s</strong> テーマのデフォルトのコンテンツ幅は%dピクセルです。"
+
+#: modules/custom-css/custom-css-4.7.php:264
+msgid "Set a different content width for full size images."
+msgstr "フルサイズの画像に異なるコンテンツ幅を設定する。"
+
+#: modules/custom-css/custom-css-4.7.php:246
+#: modules/custom-css/custom-css-4.7.php:253
+msgid "Last modified: %s"
+msgstr "最終変更日時: %s"
+
+#: modules/custom-css/custom-css-4.7.php:158
+msgid "Custom CSS is now managed in the Customizer."
+msgstr "カスタム CSS はカスタマイザーで管理するようになりました。"
+
+#: modules/custom-css/custom-css-4.7.php:153
+msgid "Manage with Live Preview"
+msgstr "ライブプレビューで管理"
+
+#: modules/custom-css/custom-css-4.7.php:101
+#: modules/custom-css/custom-css-4.7.php:164
+#: modules/custom-css/custom-css-4.7.php:614
+msgid "Preprocessor"
+msgstr "プリプロセッサ"
+
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:65
+msgid "Enable WordPress REST API to unlock Jetpack's full potential!"
+msgstr "WordPress REST APIを有効化して、Jetpack の可能性を最大限に引き出しましょう。"
+
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:60
+msgid "WordPress REST API is disabled"
+msgstr "WordPress REST API が無効化されています"
 
 #: sync/class.jetpack-sync-actions.php:207
 msgid "Every %d minutes"
@@ -41,15 +129,15 @@ msgstr "「いいね」した人のアクティビティを含める"
 
 #: modules/widgets/my-community.php:94
 msgid "50 community members"
-msgstr "コミュニティメンバー50人"
+msgstr "50人のコミュニティーメンバー"
 
 #: modules/widgets/my-community.php:93
 msgid "10 community members"
-msgstr "コミュニティメンバー10人"
+msgstr "10人のコミュニティーメンバー"
 
 #: modules/widgets/my-community.php:90
 msgid "Show a maximum of"
-msgstr "表示数上限:"
+msgstr "表示する最大数:"
 
 #: modules/widgets/my-community.php:48
 msgid "Community"
@@ -57,7 +145,7 @@ msgstr "コミュニティ"
 
 #: modules/widgets/my-community.php:39
 msgid "Display members of your site's community."
-msgstr "サイトのコミュニティのメンバーを表示します。"
+msgstr "サイトのコミュニティーのメンバーを表示します。"
 
 #: modules/widgets/my-community.php:37
 msgid "My Community"
@@ -105,39 +193,39 @@ msgstr "VideoPress 情報"
 
 #: modules/videopress-v2/class.videopress-cli.php:167
 msgid "The cron named `%s` was removed from the schedule."
-msgstr "`%s` という名称の cron 予約を解除しました。"
+msgstr "`%s` という cron は予約解除されました。"
 
 #: modules/videopress-v2/class.videopress-cli.php:139
 msgid "The cron named `%s` was scheduled."
-msgstr "`%s` という名称の cron を予約しました。"
+msgstr "`%s` という cron を予約しました。"
 
 #: modules/videopress-v2/class.videopress-cli.php:110
 msgid "Cron will run at: %s GMT"
-msgstr "Cron 実行時刻: %s GMT"
+msgstr "cron は次の時間に実行されます: %s GMT"
 
 #: modules/videopress-v2/class.videopress-cli.php:107
 msgid "The cron is not scheduled to run."
-msgstr "Cron を実行する予定はありません。"
+msgstr "cron の実行は予約されていません。"
 
 #: modules/videopress-v2/class.videopress-cli.php:101
 #: modules/videopress-v2/class.videopress-cli.php:134
 #: modules/videopress-v2/class.videopress-cli.php:162
 msgid "There is no cron named %s."
-msgstr "%s という名前の cron はありません。"
+msgstr "%s という cron はありません。"
 
 #: modules/videopress-v2/class.videopress-cli.php:95
 #: modules/videopress-v2/class.videopress-cli.php:128
 #: modules/videopress-v2/class.videopress-cli.php:156
 msgid "You need to provide the name of the cronjob to schedule."
-msgstr "予約するには cronjob の名称を入力する必要があります。"
+msgstr "予約する cron ジョブの名前を入力する必要があります。"
 
 #: modules/videopress-v2/class.videopress-cli.php:66
 msgid "Found %d available cron jobs."
-msgstr "利用可能な cron ジョブ%d件が見つかりました。"
+msgstr "利用可能な cron ジョブが%d件見つかりました。"
 
 #: modules/videopress-v2/class.videopress-cli.php:63
 msgid "Found 1 available cron job."
-msgstr "利用可能な cron ジョブ1件が見つかりました。"
+msgstr "利用可能な cron ジョブが1件見つかりました。"
 
 #: modules/videopress-v2/class.videopress-cli.php:60
 msgid "Found no available cron jobs."
@@ -157,11 +245,11 @@ msgstr "その投稿には VideoPress 動画が関連付けられていません
 
 #: modules/videopress-v2/class.videopress-ajax.php:80
 msgid "A valid post_id is required."
-msgstr "有効な post_id が必要です。"
+msgstr "有効な post_id が必須です。"
 
 #: modules/sso/class.jetpack-sso-notices.php:194
 msgid "Logging in with WordPress.com is disabled for sites that are in staging mode."
-msgstr "ステージングモードのサイトでは、WordPress.com によるログインは無効化されています。"
+msgstr "ステージングモードのサイトでは、WordPress.com でログインすることができません。"
 
 #: modules/shortcodes/pinterest.php:26
 msgid "Sorry, that Pinterest URL was not recognized."
@@ -234,15 +322,15 @@ msgstr "SEO ツール"
 #: modules/contact-form/class-grunion-contact-form-endpoint.php:24
 #: modules/contact-form/class-grunion-contact-form-endpoint.php:42
 msgid "Sorry, you cannot view this resource."
-msgstr "このリソースを表示する権限がありません。"
+msgstr "このリソースを表示することはできません。"
 
 #: json-endpoints/jetpack/class.jetpack-json-api-themes-install-endpoint.php:116
 msgid "Problem downloading theme"
-msgstr "テーマのダウンロード中に問題が発生しました"
+msgstr "テーマをダウンロード中に問題が発生しました"
 
 #: json-endpoints/jetpack/class.jetpack-json-api-themes-install-endpoint.php:106
 msgid "Problem creating file for theme download"
-msgstr "テーマのダウンロード用ファイルを作成する際に問題が発生しました"
+msgstr "テーマダウンロードのファイルを作成中に問題が発生しました"
 
 #: json-endpoints/jetpack/class.jetpack-json-api-themes-install-endpoint.php:87
 msgid "This theme does not exist"
@@ -250,11 +338,11 @@ msgstr "このテーマは存在しません"
 
 #: json-endpoints/class.wpcom-json-api-site-settings-endpoint.php:479
 msgid "Invalid SEO title format."
-msgstr "無効な SEO タイトル形式。"
+msgstr "無効な SEO タイトル形式です。"
 
 #: json-endpoints/class.wpcom-json-api-site-settings-endpoint.php:463
 msgid "Invalid SEO meta description value."
-msgstr "無効な SEO メタディスクリプション値。"
+msgstr "無効な SEO メタ情報の値です。"
 
 #: json-endpoints/class.wpcom-json-api-site-settings-endpoint.php:459
 #: json-endpoints/class.wpcom-json-api-site-settings-endpoint.php:475
@@ -262,7 +350,7 @@ msgstr "無効な SEO メタディスクリプション値。"
 #: json-endpoints/class.wpcom-json-api-update-post-v1-1-endpoint.php:570
 #: json-endpoints/class.wpcom-json-api-update-post-v1-2-endpoint.php:571
 msgid "SEO tools are not enabled for this site."
-msgstr "このサイトでは SEO ツールが有効化されていません。"
+msgstr "SEO ツールは、このサイトでは使用できません。"
 
 #: class.jetpack.php:5422
 msgid "Cannot parse URL %s"
@@ -270,43 +358,43 @@ msgstr "URL %s を解析できません"
 
 #: class.jetpack-idc.php:679
 msgid "An administrator of this site can take Jetpack out of Safe Mode."
-msgstr "このサイトの管理者は Jetpack をセーフモードから外すことができます。"
+msgstr "このサイトの管理者は Jetpack のセーフモードを解除できます。"
 
 #: class.jetpack-idc.php:659
 msgid "Jetpack has been placed into Safe Mode. Learn more about <a href=\"%1$s\">Safe Mode</a>."
-msgstr "Jetpack はセーフモードに入っています。<a href=\"%1$s\">セーフモード</a>について詳しくはこちらをご覧ください。"
+msgstr "Jetpack はセーフモードになっています。<a href=\"%1$s\">セーフモード</a>の詳細。"
 
 #: class.jetpack-idc.php:637
 msgid "Unsure what to do? <a href=\"%1$s\">Read more about Jetpack Safe Mode</a>"
-msgstr "どうすればよいか分からない場合は、 <a href=\"%1$s\">Jetpack セーフモードの詳細をご覧ください</a>"
+msgstr "どうすればよいかよく分からない場合は、<a href=\"%1$s\">Jetpack セーフモードについて詳しくご覧ください</a>。"
 
 #: class.jetpack-idc.php:622
 msgid "Start Fresh &amp; Create New Connection"
-msgstr "はじめからスタートして新規連携を作成"
+msgstr "新規連携を作成する"
 
 #: class.jetpack-idc.php:598
 msgid ""
 "No. <a href=\"%1$s\">%2$s</a> is a new and different website that's separate from \n"
 "\t\t\t\t\t<a href=\"%3$s\">%4$s</a>. It requires  a new connection to WordPress.com for new stats and subscribers."
 msgstr ""
-"いいえ。<a href=\"%1$s\">%2$s</a> は新規サイトで、<a href=\"%3$s\">%4$s</a> とは別のものです。\n"
-"\t\t\t\t\tWordPress.com との新たな接続および統計情報・購読者が必要です。"
+"いいえ。<a href=\"%1$s\">%2$s</a> は、\n"
+"\t\t\t\t\t<a href=\"%3$s\">%4$s</a> とは異なる新しいサイトです。新しい統計や購読者のために WordPress.com と新規連携する必要があります。"
 
 #: class.jetpack-idc.php:583
 msgid "Migrate Stats &amp; Subscribers"
-msgstr "統計情報・購読者を移管"
+msgstr "統計や購読者を移管"
 
 #: class.jetpack-idc.php:559
 msgid ""
 "Yes. <a href=\"%1$s\">%2$s</a> is replacing <a href=\"%3$s\">%4$s</a>. I would like to\n"
 "\t\t\t\t\tmigrate my stats and subscribers from <a href=\"%3$s\">%4$s</a> to <a href=\"%1$s\">%2$s</a>."
 msgstr ""
-"はい。<a href=\"%1$s\">%2$s</a> は <a href=\"%3$s\">%4$s</a> を置き換えるものです。\n"
-"\t\t\t\t\t統計情報と購読者情報を <a href=\"%3$s\">%4$s</a> から <a href=\"%1$s\">%2$s</a> へ移管したいです。"
+"はい。<a href=\"%1$s\">%2$s</a> は <a href=\"%3$s\">%4$s</a> を置き換えるサイトです。\n"
+"\t\t\t\t\t統計や購読者を <a href=\"%3$s\">%4$s</a> から <a href=\"%1$s\">%2$s</a> に移行したいです。"
 
 #: class.jetpack-idc.php:538
 msgid "Is %1$s the new home of %2$s?"
-msgstr "%1$s は %2$s の新しいホームアドレスですか ?"
+msgstr "%1$s は %2$s の新しいアドレスですか ?"
 
 #: class.jetpack-idc.php:524
 msgid "Fix Jetpack's Connection"
@@ -317,8 +405,8 @@ msgid ""
 "If this is a separate and new website, or the new home of <a href=\"%1$s\">%2$s</a>, \n"
 "\t\t\t\t\twe recommend turning Safe Mode off, and re-establishing your connection to WordPress.com."
 msgstr ""
-"これが別の新サイト、または <a href=\"%1$s\">%2$s</a> の新しいホームアドレスの場合は、\n"
-"\t\t\t\t\tセーフモードをオフにして WordPress.com との連携を再確立することをおすすめします。"
+"これが別個の新しいサイトである場合、または <a href=\"%1$s\">%2$s</a> の新しいアドレスである場合、\n"
+"\t\t\t\t\tセーフモードをオフにし、WordPress.com との連携を再構築することをおすすめします。"
 
 #: class.jetpack-idc.php:487
 msgid "Confirm Safe Mode"
@@ -329,20 +417,20 @@ msgid ""
 "Is this website a temporary duplicate of <a href=\"%1$s\">%2$s</a> for the purposes \n"
 "\t\t\t\t\tof testing, staging or development? If so, we recommend keeping it in Safe Mode."
 msgstr ""
-"このサイトがテスト・ステージング・開発用の <a href=\"%1$s\">%2$s</a> の一時的な複製版である場合は、\n"
-"\t\t\t\t\tセーフモードを保持することをおすすめします。"
+"このサイトは、テスト、ステージング、開発のために <a href=\"%1$s\">%2$s</a>\n"
+"\t\t\t\t\tを一時的に複製したものですか ? その場合には、セーフモードにしておくことをおすすめします。"
 
 #: class.jetpack-idc.php:442
 msgid ""
 "Please confirm Safe Mode or fix the Jetpack connection. Select one of the options below or <a href=\"%1$s\">learn \n"
 "\t\t\t\t\tmore about Safe Mode</a>."
 msgstr ""
-"セーフモードを確認するか、Jetpack 連携を修正してください。下記のいずれかのオプションを選択するか、<a href=\"%1$s\">\n"
-"\t\t\t\t\tセーフモードについての詳細</a>をご覧ください。"
+"セーフモードであることを確認するか Jetpack 連携を修正してください。次のオプションのうちいずれかを選ぶか、<a href=\"%1$s\">\n"
+"\t\t\t\t\tセーフモードの詳細をご覧ください</a>。"
 
 #: class.jetpack-idc.php:418
 msgid "Jetpack has been placed into <a href=\"%1$s\">Safe mode</a> because we noticed this is an exact copy of <a href=\"%2$s\">%3$s</a>."
-msgstr "Jetpack はこのサイトが <a href=\"%2$s\">%3$s</a> の完全なコピーであることを認識したため、<a href=\"%1$s\">セーフモード</a>に移行しました。 "
+msgstr "これが <a href=\"%2$s\">%3$s</a> の完全な複製であることが認識されたため、Jetpack は<a href=\"%1$s\">セーフモード</a>になっています。"
 
 #: class.jetpack-idc.php:335
 msgid "Try Again"
@@ -358,11 +446,11 @@ msgstr "Jetpack セーフモード"
 
 #: class.jetpack-debugger.php:259
 msgid "Would you like to use Jetpack on your local development site? You can do so thanks to <a href=\"%s\">Jetpack's development mode</a>."
-msgstr "<a href=\"%s\">Jetpack の開発モード</a>により、ローカル開発サイトで Jetpack を使うことができます。"
+msgstr "<a href=\"%s\">Jetpack 開発モード</a>で、ローカル開発サイトでも Jetpack をご利用いただけます。"
 
 #: class.jetpack-debugger.php:155
 msgid "Your url is set as `%1$s`, but your WordPress.com connection lists it as `%2$s`!"
-msgstr "URLは `%1$s` に設定されていますが、WordPress.com 連携では `%2$s` と表示されています。"
+msgstr "URL は `%1$s` に設定されていますが、WordPress.com 連携では `%2$s` と認識されています。"
 
 #: class.jetpack-connection-banner.php:480
 msgid "or visit our site for the full feature list."
@@ -378,7 +466,7 @@ msgstr "Jetpack には、カスタム CSS、お問い合わせフォーム、ギ
 
 #: class.jetpack-connection-banner.php:459
 msgid "More Jetpack features our users love"
-msgstr "その他の人気 Jetpack 機能"
+msgstr "ユーザーお気に入りの Jetpack の他の機能"
 
 #: class.jetpack-connection-banner.php:440
 msgid "When Jetpack is connected to WordPress.com, head over to the Apps tab within Jetpack for direct links to the mobile and desktop apps."
@@ -390,7 +478,7 @@ msgstr "世界中のどこからでもコンテンツを公開したり、統計
 
 #: class.jetpack-connection-banner.php:423
 msgid "Free WordPress apps to manage your site(s) from any device"
-msgstr "任意のデバイスからサイトを管理するための無料 WordPress アプリ"
+msgstr "無料の WordPress アプリなら、どのデバイスからでもサイトを管理できます"
 
 #: class.jetpack-connection-banner.php:404
 msgid "Use of our CDN is unlimited and scales with your site for free. You can also use it for your theme images and files to further speed up your site."
@@ -418,7 +506,7 @@ msgstr "Jetpack は、総当たり攻撃や権限がないユーザーによる�
 
 #: class.jetpack-connection-banner.php:340
 msgid "Multiple security tools to give you peace of mind"
-msgstr "安心を提供する複数のセキュリティツール"
+msgstr "安心を提供する複数のセキュリティーツール"
 
 #: class.jetpack-connection-banner.php:333
 #: class.jetpack-connection-banner.php:380
@@ -444,7 +532,7 @@ msgstr "関連記事、ソーシャル機能、拡張配信機能が提供する
 
 #: class.jetpack-connection-banner.php:303
 msgid "Jetpack provides detailed stats and insights about your viewers."
-msgstr "Jetpack は読者に関する詳細な統計情報と見識を提供します。"
+msgstr "Jetpack は読者に関する詳細な統計情報とインサイトを提供します。"
 
 #: class.jetpack-connection-banner.php:295
 msgid "Detailed stats and traffic tools to help your site grow"
@@ -456,7 +544,7 @@ msgstr "クイックツアーをスタート"
 
 #: class.jetpack-connection-banner.php:283
 msgid "Start tour to Learn about the benefits you receive when you connect Jetpack to WordPress.com"
-msgstr "Jetpack を WordPress.com に接続するメリットについて学びましょう。"
+msgstr "Jetpack を WordPress.com と連携させることのメリットが分かるツアーを開始します"
 
 #: class.jetpack-connection-banner.php:266
 msgid "Connect to WordPress.com (free) to get started!"
@@ -492,12 +580,12 @@ msgstr "統計情報・トラフィックツール"
 
 #. Translators: the plural variable is a comma-separated list. Example: dog,
 #. cat, bird.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:730
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:706
 msgid "Invalid option: %s."
 msgid_plural "Invalid options: %s."
 msgstr[0] "無効なオプション: %s"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:435
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:411
 msgid "The requested Jetpack data updates were successful."
 msgstr "要求された Jetpack データの更新に成功しました。"
 
@@ -521,41 +609,41 @@ msgstr "同期エラーオプションを削除できませんでした。"
 msgid "Could not confirm safe mode."
 msgstr "セーフモードを確認できませんでした。"
 
-#: _inc/jetpack-strings.php:420
+#: _inc/jetpack-strings.php:425
 msgid "Make sure your site is easily found on search engines with SEO tools for your content and social posts."
 msgstr "コンテンツやソーシャル投稿用の SEO ツールを活用し、検索エンジンでサイトが簡単に見つかるようにしましょう。"
 
-#: _inc/jetpack-strings.php:419
+#: _inc/jetpack-strings.php:424
 msgid "Activate this module to use the advanced SEO tools."
 msgstr "高度な SEO ツールを使用するにはこのモジュールを有効化してください。"
 
-#: _inc/jetpack-strings.php:418
+#: _inc/jetpack-strings.php:423
 msgid "Configure your SEO settings."
 msgstr "SEO 設定を行いましょう。"
 
-#: _inc/jetpack-strings.php:412
+#: _inc/jetpack-strings.php:417
 msgid "The easiest way to upload ad-free and unbranded videos to your site. You get stats on video playback and shares and the player is lightweight and responsive."
 msgstr "広告やブランディングのない動画をサイトにアップロードする最も簡単な方法です。動画の再生と共有に関する統計情報を取得でき、プレーヤーは軽量・レスポンシブ対応です。"
 
-#: _inc/jetpack-strings.php:411
+#: _inc/jetpack-strings.php:416
 msgid "Configure your VideoPress settings."
 msgstr "VideoPress の設定を行ってください。"
 
-#: _inc/jetpack-strings.php:301
+#: _inc/jetpack-strings.php:308
 msgid "You are running Jetpack on a staging server."
 msgstr "ステージングサーバーで Jetpack を実行中です。"
 
-#: _inc/jetpack-strings.php:300
+#: _inc/jetpack-strings.php:307
 msgid "More Info"
 msgstr "詳しい情報"
 
 #: _inc/jetpack-strings.php:185
 msgid "Introducing our most affordable backups and security plan yet"
-msgstr "最も手頃な価格のバックアップ・セキュリティプランをご紹介"
+msgstr "最も手頃なバックアップ & セキュリティプランをご紹介します"
 
 #: _inc/jetpack-strings.php:184
 msgid "The Personal Plan keeps your data, site, and hard work safe."
-msgstr "パーソナルプランは、データやサイト、苦労して作ったコンテンツを安全に保ちます。"
+msgstr "パーソナルプランは、データ・サイト・コンテンツを安全に保護します。"
 
 #: _inc/jetpack-strings.php:183
 msgid "How much is your website worth?"
@@ -567,15 +655,15 @@ msgstr "1か月あたり1杯のコーヒーよりも安い価格で、苦労し�
 
 #: _inc/jetpack-strings.php:180
 msgid "Learn more..."
-msgstr "さらに詳しく"
+msgstr "さらに詳しく..."
 
 #: _inc/jetpack-strings.php:177
 msgid "Your site is on the Jetpack Personal plan"
-msgstr "Jetpack パーソナルプランをご利用中です。"
+msgstr "このサイトは Jetpack パーソナルプランをご利用中です"
 
 #: _inc/jetpack-strings.php:176
 msgid "With this plan you are provided with spam-protection, daily backups (up to 30 days), and unlimited storage."
-msgstr "このプランでは、スパム保護、毎日のバックアップ (最大30日間保存)、無制限のストレージが提供されます。"
+msgstr "このプランがあれば、スパム対策、日次バックアップ (最大30日) や無制限の容量を利用できます。"
 
 #: _inc/jetpack-strings.php:174
 msgid "With this plan you are provided with spam-protection, daily backups (up to 30 days), unlimited backup storage, security scanning, and priority support."
@@ -587,11 +675,11 @@ msgstr "迷惑メール対策、リアルタイムバックアップ (アーカ�
 
 #: _inc/jetpack-strings.php:164
 msgid "Daily backup of all your site data with unlimited space and one-click restores (powered by VaultPress)."
-msgstr "無制限のスペースとワンクリック復元 (VaultPress 提供) を含む毎日のサイトデータバックアップ。"
+msgstr "容量無制限なのでサイトのすべてのデータを毎日バックアップでき、ワンクリックで復元できます (VaultPress 提供)。"
 
 #: _inc/jetpack-strings.php:160
 msgid "Daily backup of all your site data with unlimited space, one-click restores, automated security scanning, and priority support (powered by VaultPress)."
-msgstr "無制限のスペースとワンクリック復元、自動セキュリティスキャン、優先サポート (VaultPress 提供) を含む毎日のサイトデータバックアップ。"
+msgstr "容量無制限なのでサイトのすべてのデータを毎日バックアップでき、ワンクリックで復元できます。また、自動セキュリティスキャン、優先サポートも含まれます (VaultPress 提供)。"
 
 #: _inc/jetpack-strings.php:157 _inc/jetpack-strings.php:161
 msgid "Backups & Security Scanning"
@@ -599,7 +687,7 @@ msgstr "バックアップとセキュリティスキャン"
 
 #: _inc/jetpack-strings.php:156
 msgid "Real-time backup of all your site data with unlimited space, one-click restores, automated security scanning, one-click threat resolution, and priority support (powered by VaultPress)."
-msgstr "無制限のスペース、ワンクリックで復元、自動セキュリティスキャン、ワンクリックでの脅威解決、優先サポート (VaultPress 提供) を含むリアルタイムバックアップ。"
+msgstr "容量無制限なのでサイトのすべてのデータをリアルタイムでバックアップでき、ワンクリックで復元できます。また、自動セキュリティスキャン、ワンクリック脅威解決、優先サポートも含まれます (VaultPress 提供)。"
 
 #: _inc/jetpack-strings.php:153
 msgid "SEO Tools"
@@ -607,7 +695,7 @@ msgstr "SEO ツール"
 
 #: _inc/jetpack-strings.php:152
 msgid "Advanced SEO tools to help your site get found when people search for relevant content."
-msgstr "関連性の高いコンテンツをユーザーが検索した際にサイトを見つけてもらいやすくするための高度な SEO ツール。"
+msgstr "高度な SEO ツールがあれば、関連するコンテンツを探している読者にサイトを見つけてもらいやすくなります。"
 
 #: _inc/jetpack-strings.php:151
 msgid "Configure Site SEO"
@@ -619,15 +707,15 @@ msgstr "SEO ツールを有効化"
 
 #: _inc/jetpack-strings.php:146
 msgid "Need more? Running a business site?"
-msgstr "さらに機能が必要ですか ? ビジネス向けサイトを運用中ですか ?"
+msgstr "もっと機能が欲しい場合やビジネスサイトを運営している場合。"
 
 #: _inc/jetpack-strings.php:145
 msgid "If your site is important to you, consider protecting and improving it with some of our advanced features: "
-msgstr "サイトがあなたにとって大事なら、さらに高度な機能を活用した保護や改善をご検討ください。"
+msgstr "重要なサイトであるなら、WordPress.com が提供する高度な機能によるサイトの保護・改善をご検討ください。"
 
 #: _inc/jetpack-strings.php:144
 msgid "On-demand security scanning"
-msgstr "オンデマンドセキュリティスキャン"
+msgstr "オンデマンドのセキュリティスキャン"
 
 #: _inc/jetpack-strings.php:140
 msgid "Advanced SEO tools"
@@ -645,31 +733,31 @@ msgstr "WordPress.com を使ってログインする際にエラーが発生し�
 msgid "Logging in with WordPress.com is not currently available because this site is experiencing connection problems."
 msgstr "サイトで接続上の問題が発生しているため、現在 WordPress.com を使ったログインは利用できません。"
 
-#: _inc/jetpack-strings.php:424
+#: _inc/jetpack-strings.php:429
 msgid "Search your content."
 msgstr "コンテンツを検索。"
 
-#: _inc/jetpack-strings.php:401
+#: _inc/jetpack-strings.php:406
 msgid "{{a}}Manage Likes visibility from the Sharing Module Settings{{/a}}"
 msgstr "{{a}}「共有」モジュール設定で「いいね」の表示状態を管理{{/a}}"
 
-#: _inc/jetpack-strings.php:391
+#: _inc/jetpack-strings.php:396
 msgid "Hide the stats smiley face image. The image helps collect stats but should still work when hidden."
 msgstr "統計情報用のスマイリーフェイス画像を非表示にします。この画像は統計情報の収集に使われますが、非表示にしても引き続き動作します。"
 
-#: _inc/jetpack-strings.php:388
+#: _inc/jetpack-strings.php:393
 msgid "Your Current IP: %(ip)s"
 msgstr "現在の IP: %(ip)s"
 
-#: _inc/jetpack-strings.php:386
+#: _inc/jetpack-strings.php:391
 msgid "Whitelisting an IP address prevents it from ever being blocked by Jetpack."
 msgstr "IP アドレスをホワイトリストに追加すれば、Jetpack からブロックされることがなくなります。"
 
-#: _inc/jetpack-strings.php:384
+#: _inc/jetpack-strings.php:389
 msgid "IPv4 and IPv6 are acceptable. {{br/}} To specify a range, enter the low value and high value separated by a dash. Example: 12.12.12.1-12.12.12.100"
 msgstr "IPv4 と IPv6 が使用可能です。{{br/}} レンジを指定するには、低い値と高い値を半角ダッシュでつないで記入してください。例: 12.12.12.1-12.12.12.100"
 
-#: _inc/jetpack-strings.php:358
+#: _inc/jetpack-strings.php:363
 msgid "Link your account to WordPress.com to start using this feature."
 msgstr "この機能を使い始めるにはアカウントを WordPress.com に連携してください。"
 
@@ -713,9 +801,7 @@ msgstr ""
 msgid ""
 "Add and organize content that doesn’t necessarily fit into a post or static page such as portfolios\n"
 "\t\tor testimonials. Custom\tcontent can be visible at specific URLs, or you may add them with shortcodes."
-msgstr ""
-"ポートフォリオやお客様の声など、投稿や静的ページに該当しないと思われるコンテンツを追加および\n"
-"\t\t整理しましょう。カスタム\tコンテンツは特定の URL で表示するか、ショートコードを使用して追加できます。"
+msgstr "ポートフォリオやお客様の声など、投稿や固定ページに該当しないコンテンツを追加・整理しましょう。カスタムコンテンツは特定の URL で表示したり、ショートコードを使って追加できます。"
 
 #: modules/module-info.php:557
 msgid ""
@@ -985,140 +1071,136 @@ msgstr ""
 msgid "Feature Info"
 msgstr "機能情報"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1109
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1085
 msgid "Your site was successfully backed-up %s ago."
 msgstr "サイトは%s前に正常にバックアップされました。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1101
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1077
 msgid "VaultPress is active and will back up your site soon."
 msgstr "VaultPress は有効で、まもなくサイトのバックアップを実行します。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1091
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1067
 msgid "You need to register for VaultPress."
 msgstr "VaultPress に登録する必要があります。"
 
 #. translators: %1$s is a comma separated list of services, and %2$s is a
 #. single service name like Google, Bing, Pinterest, etc.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1057
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1033
 msgid "Your site is verified with %1$s and %2$s."
 msgstr "サイトは %1$s および %2$s によって検証されました。"
 
 #. translators: %s is a service name like Google, Bing, Pinterest, etc.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1045
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1021
 msgid "Your site is verified with %s."
 msgstr "サイトは %s によって検証されました。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1008
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1036
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:984
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1012
 msgid "Site not verified with any service."
 msgstr "サイトは、いずれのサービスによっても検証されていません。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:893
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:869
 msgid "Invalid Akismet key. Please contact support."
 msgstr "Akismet キーが無効です。サポートにご連絡ください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:884
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:860
 msgid "Please activate Akismet."
 msgstr "Akismet を有効化してください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:880
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:856
 msgid "Please install Akismet."
 msgstr "Akismet をインストールしてください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:851
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:963
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:996
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1082
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:827
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:939
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:972
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1058
 msgid "The requested Jetpack module is not active."
 msgstr "リクエストされた Jetpack モジュールは無効です。"
 
 #. Translators: the plural variable is a comma-separated list. Example: dog,
 #. cat, bird.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:749
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:725
 msgid "Option not updated: %s."
 msgid_plural "Options not updated: %s."
 msgstr[0] "オプションが更新されていません:%s。"
 
 #. Translators: the first variable is a module option or slug, or setting. The
 #. second is the error message .
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:740
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:716
 msgid "Extra info for %1$s: %2$s"
 msgstr "%1$s では以下の情報は余分です:%2$s"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:524
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:500
 msgid "Unable to delete the Post by Email address. Please try again later."
 msgstr "メールアドレスによる投稿を削除できません。後ほど、もう一度お試しください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:519
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:495
 msgid "Unable to regenerate the Post by Email address. Please try again later."
 msgstr "メールアドレスによる投稿を再生成できません。後ほど、もう一度お試しください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:514
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:490
 msgid "Unable to create the Post by Email address. Please try again later."
 msgstr "メールアドレスによる投稿を作成できません。後ほど、もう一度お試しください。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:413
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:389
 msgid "Missing options."
 msgstr "オプションが不足しています。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:404
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:494
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:380
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:470
 msgid "The requested Jetpack module is inactive."
 msgstr "リクエストされた Jetpack モジュールは無効です。"
 
 #. Translators: the variable is a module name.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:273
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:249
 msgid "The module %s failed to be activated."
 msgid_plural "The modules %s failed to be activated."
 msgstr[0] "モジュール %s の有効化に失敗しました。"
 
 #. Translators: the variable is a module name.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:259
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:235
 msgid "The module %s was activated."
 msgid_plural "The modules %s were activated."
 msgstr[0] "モジュール %s が有効化されました。"
 
 #. Translators: first variable is a list followed by the last item, which is
 #. the second variable. Example: dog, cat and bird.
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:254
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:268
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:230
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:244
 msgid "%1$s and %2$s"
 msgstr "%1$s、%2$s"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:243
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:219
 msgid "All modules activated."
 msgstr "すべてのモジュールを有効化しました。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:138
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:114
 msgid "The requested Jetpack module could not be deactivated."
 msgstr "リクエストされた Jetpack モジュールは、無効化できませんでした。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:133
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:109
 msgid "The requested Jetpack module was deactivated."
 msgstr "リクエストされた Jetpack モジュールは無効化されました。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:125
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:101
 msgid "The requested Jetpack module was already inactive."
 msgstr "リクエストされた Jetpack モジュールはすでに無効でした。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:91
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:67
 msgid "The requested Jetpack module could not be activated."
 msgstr "リクエストされた Jetpack モジュールは有効化できませんでした。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:85
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:61
 msgid "The requested Jetpack module was activated."
 msgstr "リクエストされた Jetpack モジュールは有効化されました。"
 
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:77
-msgid "This module requires your site to be set to publicly accessible."
-msgstr "このモジュールを使用するには、サイトを公開アクセスが可能に設定する必要があります。"
-
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:66
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:117
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:224
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:372
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:400
-#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:489
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:53
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:93
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:200
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:348
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:376
+#: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:465
 msgid "The requested Jetpack module was not found."
 msgstr "リクエストされた Jetpack モジュールは見つかりませんでした。"
 
@@ -1436,11 +1518,11 @@ msgstr ""
 "この操作を行う適切なユーザー権限がありません。\n"
 "\t\t\tこれが間違いであると思われる場合、サイト管理者に連絡してください。"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:65
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:76
 msgid "Update your browser to unlock Jetpack's full potential!"
 msgstr "ブラウザーを更新すると、Jetpack のすべての機能を使用できるようになります。"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:60
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:71
 msgid "You are using an unsupported browser version."
 msgstr "ご使用のブラウザーは、非対応のバージョンです。"
 
@@ -1488,7 +1570,7 @@ msgstr "Jetpack サポートスタッフに直接連絡する"
 
 #: _inc/jetpack-strings.php:444
 msgid "{{supportLink}}View our support page{{/supportLink}}{{hideOnMobile}},{{/hideOnMobile}} {{forumLink}}check the forums for answers{{/forumLink}}{{hideOnMobile}}, or{{/hideOnMobile}} {{contactLink}}contact us directly{{/contactLink}}{{hideOnMobile}}.{{/hideOnMobile}}"
-msgstr "{{supportLink}}サポートページをご覧いただくか{{/supportLink}}{{hideOnMobile}}、{{/hideOnMobile}} {{forumLink}}フォーラムで回答を探すか{{/forumLink}}{{hideOnMobile}}、または{{/hideOnMobile}} {{contactLink}}直接お問い合わせください{{/contactLink}}{{hideOnMobile}}。{{/hideOnMobile}}"
+msgstr "{{supportLink}}サポートページ{{/supportLink}}{{hideOnMobile}}をご覧ください。または{{/hideOnMobile}} {{forumLink}}フォーラムで回答を探す{{/forumLink}}{{hideOnMobile}}か、直接{{/hideOnMobile}}{{contactLink}}お問い合わせ{{/contactLink}}{{hideOnMobile}}ください。{{/hideOnMobile}}"
 
 #: _inc/jetpack-strings.php:442
 msgid "Follow Jetpack on Twitter"
@@ -1500,9 +1582,9 @@ msgstr "Facebook で「いいね」する"
 
 #: _inc/jetpack-strings.php:440
 msgid "{{hideOnMobile}}Enjoying Jetpack or have feedback?{{/hideOnMobile}} {{reviewLink}}Leave us a review{{/reviewLink}}{{hideOnMobile}},{{/hideOnMobile}} {{twitterLink}}follow us on Twitter{{/twitterLink}}{{hideOnMobile}}, and{{/hideOnMobile}} {{facebookLink}}like us on Facebook{{/facebookLink}}{{hideOnMobile}}.{{/hideOnMobile}}"
-msgstr "{{hideOnMobile}}Jetpack についてご意見はありますか?{{/hideOnMobile}} {{reviewLink}}ご意見をお送りいただくか{{/reviewLink}}{{hideOnMobile}}、{{/hideOnMobile}} {{twitterLink}}Twitter{{/twitterLink}}{{hideOnMobile}}をフォロー、および{{/hideOnMobile}} {{facebookLink}}Facebook{{/facebookLink}}{{hideOnMobile}} で「いいね!」をしてください。{{/hideOnMobile}}"
+msgstr "{{hideOnMobile}}Jetpack についてぜひ{{/hideOnMobile}}{{reviewLink}}ご意見をお送りください{{/reviewLink}}{{hideOnMobile}}。{{/hideOnMobile}} {{twitterLink}}Twitter{{/twitterLink}}{{hideOnMobile}} のフォロー、{{/hideOnMobile}} {{facebookLink}}Facebook{{/facebookLink}}{{hideOnMobile}} での「いいね !」もお待ちしています。{{/hideOnMobile}}"
 
-#: _inc/jetpack-strings.php:426 _inc/jetpack-strings.php:429
+#: _inc/jetpack-strings.php:330 _inc/jetpack-strings.php:333
 msgctxt "Navigation item."
 msgid "At a Glance"
 msgstr "概要"
@@ -1511,215 +1593,215 @@ msgstr "概要"
 msgid "Search for a Jetpack feature."
 msgstr "Jetpack の機能を検索しましょう。"
 
-#: _inc/jetpack-strings.php:423
+#: _inc/jetpack-strings.php:428
 msgid "Upgrade Jetpack and our state-of-the-art security scanner will hunt out malicious files and report them immediately so that you're never unaware of what is happening on your website."
 msgstr "Jetpack および WordPress.com の最新セキュリティスキャンは悪意のあるファイルを検出して直ちに報告するので、サイトで何が起きているか分からないということは決してありません。"
 
-#: _inc/jetpack-strings.php:422
+#: _inc/jetpack-strings.php:427
 msgid "You can see the information about security scanning in the \"At a Glance\" section."
 msgstr "セキュリティスキャンに関する情報は、「概要」セクションでご覧いただけます。"
 
-#: _inc/jetpack-strings.php:421
+#: _inc/jetpack-strings.php:426
 msgid "Configure your Security Scans"
-msgstr "セキュリティスキャンを構成する"
+msgstr "セキュリティスキャンを設定"
 
-#: _inc/jetpack-strings.php:417
+#: _inc/jetpack-strings.php:422
 msgid "This module has no configuration options"
-msgstr "このモジュールには構成オプションがありません"
+msgstr "このモジュールには設定オプションがありません"
 
-#: _inc/jetpack-strings.php:416
+#: _inc/jetpack-strings.php:421
 msgid "Let search engines and visitors know that you are serious about your websites integrity by upgrading Jetpack. Our anti-spam tools will eliminate comment spam, protect your SEO, and make it easier for visitors to stay in touch."
 msgstr "Jetpack をアップグレードして、検索エンジンにも訪問者にも、サイトの安全性に真剣に取り組んでいることを示しましょう。スパム対策ツールにより、スパムコメントを取り除き、SEO を保護し、訪問者が簡単にサイトを利用し続けられるようにします。"
 
-#: _inc/jetpack-strings.php:415
+#: _inc/jetpack-strings.php:420
 msgid "Real-time offsite backups with automated restores deliver peace-of-mind, so you can focus on writing great content and increasing traffic while we protect every aspect of your investment. Upgrade today."
 msgstr "リアルタイムのオフサイトバックアップと自動復元により安心してご利用いただけるため、投資のあらゆる部分について WordPress.com の保護を受けながら、素晴らしいコンテンツを制作してトラフィックを増やすことに集中できます。今すぐアップグレードしましょう。"
 
-#: _inc/jetpack-strings.php:413 _inc/jetpack-strings.php:414
+#: _inc/jetpack-strings.php:418 _inc/jetpack-strings.php:419
 msgid "{{link}}Configure your %(module_slug)s Settings {{/link}}"
-msgstr "{{link}}%(module_slug)s 設定を構成する{{/link}}"
+msgstr "{{link}}%(module_slug)sの設定{{/link}}"
 
-#: _inc/jetpack-strings.php:410
+#: _inc/jetpack-strings.php:415
 msgid "Subscriber"
 msgstr "購読者"
 
-#: _inc/jetpack-strings.php:409
+#: _inc/jetpack-strings.php:414
 msgid "Big iPhone/iPad Update Now Available"
 msgstr "iPhone/iPad の大幅なアップデートが利用できるようになりました"
 
-#: _inc/jetpack-strings.php:408
+#: _inc/jetpack-strings.php:413
 msgid "The WordPress for Android App Gets a Big Facelift"
 msgstr "WordPress for Android アプリが大幅リニューアル"
 
-#: _inc/jetpack-strings.php:407
+#: _inc/jetpack-strings.php:412
 msgid "Upgrade Focus: VideoPress For Weddings"
 msgstr "アップグレードの注目点:ウェディング用の VideoPress"
 
-#: _inc/jetpack-strings.php:402
+#: _inc/jetpack-strings.php:407
 msgid "WordPress.com Likes are:"
 msgstr "WordPress.com「いいね」ボタン:"
 
-#: _inc/jetpack-strings.php:400
+#: _inc/jetpack-strings.php:405
 msgid "Comments headline"
 msgstr "コメントのヘッドライン"
 
-#: _inc/jetpack-strings.php:399
+#: _inc/jetpack-strings.php:404
 msgid "A few catchy words to motivate your readers to comment."
 msgstr "読者にコメントを促すメッセージです。"
 
-#: _inc/jetpack-strings.php:397
+#: _inc/jetpack-strings.php:402
 msgid "Can readers subscribe to your posts, comments or both?"
-msgstr "読者は投稿またはコメント、あるいはその両方を購読できますか ?"
+msgstr "読者が投稿やコメントを購読できるようにしますか ?"
 
-#: _inc/jetpack-strings.php:396
+#: _inc/jetpack-strings.php:401
 msgid "Show a \"follow blog\" options in the comment form"
 msgstr "コメントフォームに「ブログをフォロー」オプションを表示"
 
-#: _inc/jetpack-strings.php:395
+#: _inc/jetpack-strings.php:400
 msgid "Show a \"follow comments\" option in the comment form."
-msgstr "コメントフォームに「コメントをフォロー」オプションを表示。"
+msgstr "コメントフォームに「コメントをフォロー」オプションを表示"
 
-#: _inc/jetpack-strings.php:394
+#: _inc/jetpack-strings.php:399
 msgid "Admin Bar"
 msgstr "管理バー"
 
-#: _inc/jetpack-strings.php:393
+#: _inc/jetpack-strings.php:398
 msgid "Put a chart showing 48 hours of views in the admin bar"
-msgstr "管理バーに過去48時間のビュー数の表を表示します"
+msgstr "管理バーに過去48時間のビュー数の表を表示"
 
-#: _inc/jetpack-strings.php:390
+#: _inc/jetpack-strings.php:395
 msgid "Registered Users: Count the page views of registered users who are logged in"
 msgstr "登録済みユーザー:ログイン中の登録ユーザーのページビューをカウントする"
 
-#: _inc/jetpack-strings.php:389
+#: _inc/jetpack-strings.php:394
 msgid "Report Visibility: Select the roles that will be able to view stats reports"
-msgstr "表示状態を報告:統計レポートを表示できる権限グループを選択してください"
+msgstr "表示状態を報告: 統計レポートを表示できる権限グループを選択してください"
 
-#: _inc/jetpack-strings.php:383
+#: _inc/jetpack-strings.php:388
 msgid "Receive Monitor Email Notifications"
 msgstr "モニターメール通知を受信する"
 
-#: _inc/jetpack-strings.php:382
+#: _inc/jetpack-strings.php:387
 msgid "Emails will be sent to "
 msgstr "メールは次の宛先に送信されます:"
 
-#: _inc/jetpack-strings.php:381
+#: _inc/jetpack-strings.php:386
 msgid "{{a}}Edit{{/a}}"
 msgstr "{{a}}編集{{/a}}"
 
-#: _inc/jetpack-strings.php:380
+#: _inc/jetpack-strings.php:385
 msgid "Match By Email"
 msgstr "メール照合"
 
-#: _inc/jetpack-strings.php:377
+#: _inc/jetpack-strings.php:382
 msgid "Show photo metadata (Exif) in carousel, when available"
 msgstr "写真のメタ情報 (Exif) がある場合はカルーセル内に表示する"
 
-#: _inc/jetpack-strings.php:376
+#: _inc/jetpack-strings.php:381
 msgid "Background Color"
 msgstr "背景色"
 
-#: _inc/jetpack-strings.php:375
+#: _inc/jetpack-strings.php:380
 msgid "Scroll infinitely (Shows 7 posts on each load)"
 msgstr "無限スクロール (読み込みのたびに投稿を7件表示)"
 
-#: _inc/jetpack-strings.php:374
+#: _inc/jetpack-strings.php:379
 msgid "Track each infinite Scroll post load as a page view in Google Analytics"
 msgstr "無限スクロールが読み込まれた際に1ページビューとして Google アナリティクスでカウントする"
 
-#: _inc/jetpack-strings.php:371 _inc/jetpack-strings.php:378
+#: _inc/jetpack-strings.php:376 _inc/jetpack-strings.php:383
 msgid "Mobile Promos"
 msgstr "モバイル広告"
 
-#: _inc/jetpack-strings.php:370
+#: _inc/jetpack-strings.php:375
 msgid "Show a promo for the WordPress mobile apps in the footer of the mobile theme"
 msgstr "WordPress モバイルアプリの広告をモバイルテーマのフッターに表示します"
 
-#: _inc/jetpack-strings.php:369
+#: _inc/jetpack-strings.php:374
 msgid "Enter your meta key \"content\" value to verify your blog with {{a}}Google Search Console{{/a}}, {{a1}}Bing Webmaster Center{{/a1}} and {{a2}}Pinterest Site Verification{{/a2}}."
 msgstr "{{a}}Google Search Console{{/a}}、{{a1}}Bing ウェブマスターセンター{{/a1}}、{{a2}}Pinterest サイト認証{{/a2}}でブログを認証するにはメタキー \"content\" の値を入力してください。"
 
-#: _inc/jetpack-strings.php:365 _inc/jetpack-strings.php:366
-#: _inc/jetpack-strings.php:367 _inc/jetpack-strings.php:368
+#: _inc/jetpack-strings.php:370 _inc/jetpack-strings.php:371
+#: _inc/jetpack-strings.php:372 _inc/jetpack-strings.php:373
 msgid "Meta key example:"
 msgstr "メタキーの例:"
 
-#: _inc/jetpack-strings.php:364
+#: _inc/jetpack-strings.php:369
 msgid "Display all your gallery pictures in a cool mosaic"
 msgstr "すべてのギャラリー画像をモザイク形式で表示する"
 
-#: _inc/jetpack-strings.php:362
+#: _inc/jetpack-strings.php:367
 msgctxt "verb"
 msgid "Copy"
 msgstr "コピー"
 
-#: _inc/jetpack-strings.php:361
+#: _inc/jetpack-strings.php:366
 msgid "Copied!"
 msgstr "コピー完了 !"
 
-#: _inc/jetpack-strings.php:360
+#: _inc/jetpack-strings.php:365
 msgid "Highlight and copy the following text to your clipboard:"
 msgstr "以下のテキストをハイライトして、クリップボードにコピーします:"
 
-#: _inc/jetpack-strings.php:359
+#: _inc/jetpack-strings.php:364
 msgid "Regenerate address"
 msgstr "アドレスを再生成"
 
-#: _inc/jetpack-strings.php:357
+#: _inc/jetpack-strings.php:362
 msgid "Configure Portfolios"
-msgstr "ポートフォリオを構成する"
+msgstr "ポートフォリオを設定"
 
-#: _inc/jetpack-strings.php:356
+#: _inc/jetpack-strings.php:361
 msgid "Configure Testimonials"
-msgstr "お客様の声を構成する"
+msgstr "お客様の声を設定"
 
-#: _inc/jetpack-strings.php:352
+#: _inc/jetpack-strings.php:357
 msgid "Automatically proofread content when: "
 msgstr "以下の場合にコンテンツを自動校正する:"
 
-#: _inc/jetpack-strings.php:351
+#: _inc/jetpack-strings.php:356
 msgid "A post or page is first published"
 msgstr "投稿または固定ページを最初に公開する時"
 
-#: _inc/jetpack-strings.php:350
+#: _inc/jetpack-strings.php:355
 msgid "A post or page is updated"
 msgstr "投稿または固定ページを更新した時"
 
-#: _inc/jetpack-strings.php:349
+#: _inc/jetpack-strings.php:354
 msgid "Automatic Language Detection"
 msgstr "自動言語検出"
 
-#: _inc/jetpack-strings.php:348
+#: _inc/jetpack-strings.php:353
 msgid "The proofreader supports English, French, German, Portuguese and Spanish."
 msgstr "校正は、英語、フランス語、ドイツ語、ポルトガル語、およびスペイン語でご利用いただけます。"
 
-#: _inc/jetpack-strings.php:345
+#: _inc/jetpack-strings.php:350
 msgid "Enable proofreading for the following grammar and style rules: "
 msgstr "以下の文法や文章スタイルのルールに対する校正を行う:"
 
-#: _inc/jetpack-strings.php:343 _inc/lib/class.core-rest-api-endpoints.php:1417
+#: _inc/jetpack-strings.php:348 _inc/lib/class.core-rest-api-endpoints.php:1417
 msgid "Clichés"
 msgstr "決まり文句/死語"
 
-#: _inc/jetpack-strings.php:333
+#: _inc/jetpack-strings.php:338
 msgid "Add a phrase"
 msgstr "フレーズを追加する"
 
-#: _inc/jetpack-strings.php:332
+#: _inc/jetpack-strings.php:337
 msgid "Use Markdown for comments"
 msgstr "コメント欄で Markdown 記法を使う"
 
-#: _inc/jetpack-strings.php:331
+#: _inc/jetpack-strings.php:336
 msgid "Search engines will find the sitemaps at these locations:"
-msgstr "検索エンジンは、次の場所にあるサイトマップを参照します:"
+msgstr "検索エンジンは以下の場所にあるサイトマップを参照します。"
 
-#: _inc/jetpack-strings.php:330
+#: _inc/jetpack-strings.php:335
 msgid "Sitemap: {{a}}%(url)s{{/a}}"
-msgstr "サイトマップ:{{a}}%(url)s{{/a}}"
+msgstr "サイトマップ: {{a}}%(url)s{{/a}}"
 
-#: _inc/jetpack-strings.php:329
+#: _inc/jetpack-strings.php:334
 msgid "News Sitemap: {{a}}%(url)s{{/a}}"
-msgstr "ニュースのサイトマップ:{{a}}%(url)s{{/a}}"
+msgstr "ニュースのサイトマップ: {{a}}%(url)s{{/a}}"
 
 #: _inc/jetpack-strings.php:327 _inc/jetpack-strings.php:328
 msgid "Need Help?"
@@ -1729,87 +1811,87 @@ msgstr "サポートが必要ですか ?"
 msgid "Send us Feedback"
 msgstr "フィードバックをお送りください"
 
-#: _inc/jetpack-strings.php:323
+#: _inc/jetpack-strings.php:296
 msgid "Quickly enhance your site by activating Jetpack's recommended features."
 msgstr "Jetpack のおすすめの機能を有効にして、すぐにサイトを強化できます。"
 
-#: _inc/jetpack-strings.php:322
+#: _inc/jetpack-strings.php:295
 msgid "Activate Recommended Features"
 msgstr "おすすめの機能の有効化"
 
-#: _inc/jetpack-strings.php:321
+#: _inc/jetpack-strings.php:294
 msgid "Jetpack's recommended features include:"
 msgstr "Jetpack のおすすめの機能には、次のようなものがあります。"
 
-#: _inc/jetpack-strings.php:320
+#: _inc/jetpack-strings.php:293
 msgid "Features can be activated or deactivated at any time."
 msgstr "各機能は、いつでも有効化または無効化できます。"
 
-#: _inc/jetpack-strings.php:319
+#: _inc/jetpack-strings.php:292
 msgid "Skip the Jetpack Jumpstart process"
 msgstr "Jetpack のジャンプスタートプロセスのスキップ"
 
-#: _inc/jetpack-strings.php:318
+#: _inc/jetpack-strings.php:291
 msgid "Skip this step"
 msgstr "このステップをスキップ"
 
-#: _inc/jetpack-strings.php:317
+#: _inc/jetpack-strings.php:324
 msgid "Cheatin' uh?"
 msgstr "間違った操作を行われたようです。"
 
-#: _inc/jetpack-strings.php:316
+#: _inc/jetpack-strings.php:323
 msgid "{{p}}Would you mind telling us why you did not complete the Jetpack connection in this {{a}}2 question survey{{/a}}?{{/p}}{{p}}A Jetpack connection is required for our free security and traffic features to work.{{/p}}"
-msgstr "{{p}}この{{a}}2問のアンケート{{/a}}で Jetpack 接続を完了しなかった理由を教えていただけますか ?{{/p}}{{p}}無料のセキュリティおよびトラフィック機能をご利用いただくには、Jetpack 接続が必要です。{{/p}}"
+msgstr "{{p}}この{{a}}2問のアンケート{{/a}}で Jetpack 連携を完了しなかった理由を教えていただけますか ?{{/p}}{{p}}無料のセキュリティおよびトラフィック機能をご利用いただくには、Jetpack 連携が必要です。{{/p}}"
 
-#: _inc/jetpack-strings.php:307
+#: _inc/jetpack-strings.php:314
 msgid "Welcome to {{s}}Jetpack %(jetpack_version)s{{/s}}!"
 msgstr "{{s}}Jetpack %(jetpack_version)s{{/s}} へようこそ !"
 
-#: _inc/jetpack-strings.php:306
+#: _inc/jetpack-strings.php:313
 msgid "Your Jetpack is already connected."
 msgstr "Jetpack はすでに正常に連携されています。"
 
-#: _inc/jetpack-strings.php:305
+#: _inc/jetpack-strings.php:312
 msgid "You're fueled up and ready to go, Jetpack is now active."
 msgstr "準備ができました ! Jetpack は有効になっています。"
 
-#: _inc/jetpack-strings.php:304
+#: _inc/jetpack-strings.php:311
 msgid "You're fueled up and ready to go."
 msgstr "準備ができました !"
 
-#: _inc/jetpack-strings.php:303
+#: _inc/jetpack-strings.php:310
 msgid "You are currently running a development version of Jetpack."
 msgstr "現在、Jetpack の開発バージョンを実行しています。"
 
-#: _inc/jetpack-strings.php:302
+#: _inc/jetpack-strings.php:309
 msgid "Submit Beta feedback"
 msgstr "ベータ版へのフィードバックを送信"
 
-#: _inc/jetpack-strings.php:299
+#: _inc/jetpack-strings.php:306
 msgid "Currently in {{a}}Development Mode{{/a}} via the jetpack_development_mode filter.{{br/}}Some features are disabled."
 msgstr "現在 jetpack_development_mode フィルターにより{{a}}開発モード{{/a}}になっています。{{br/}}いくつかの機能は無効です。"
 
-#: _inc/jetpack-strings.php:298
+#: _inc/jetpack-strings.php:305
 msgid "Currently in {{a}}Development Mode{{/a}} via the JETPACK_DEV_DEBUG constant.{{br/}}Some features are disabled."
 msgstr "現在 JETPACK_DEV_DEBUG 定数により{{a}}開発モード{{/a}}になっています。{{br/}}いくつかの機能は無効です。"
 
-#: _inc/jetpack-strings.php:297
+#: _inc/jetpack-strings.php:304
 msgid "Currently in {{a}}Development Mode{{/a}} because your site URL lacks a dot (e.g. http://localhost).{{br/}}Some features are disabled."
 msgstr "サイトの URL にドットが欠落している (例: http://localhost) ため、現在{{a}}開発モード{{/a}}になっています。{{br/}}いくつかの機能は無効です。"
 
-#: _inc/jetpack-strings.php:296
+#: _inc/jetpack-strings.php:303
 msgid "You, %(userName)s, are not connected to WordPress.com."
-msgstr "%(userName)s 様は WordPress.com に接続されていません。"
+msgstr "%(userName)s さんは WordPress.com に連携していません。"
 
-#: _inc/jetpack-strings.php:294
+#: _inc/jetpack-strings.php:301
 msgid "What would you like to see on your Jetpack Dashboard?"
 msgstr "Jetpack ダッシュボードに何が表示されるとよいでしょうか ?"
 
-#: _inc/jetpack-strings.php:293
+#: _inc/jetpack-strings.php:300
 msgid "Let us know!"
 msgstr "ご意見をお聞かせください !"
 
-#: _inc/jetpack-strings.php:291
+#: _inc/jetpack-strings.php:298
 msgid "Would you tell us why? Just {{a}}answering two simple questions{{/a}} would help us improve Jetpack."
 msgstr "理由を教えていただけますか ?{{a}}2つの簡単な質問に回答{{/a}}していただき、Jetpack の改善にご協力ください。"
 
@@ -1819,7 +1901,7 @@ msgstr "Jetpack へようこそ"
 
 #: _inc/jetpack-strings.php:289
 msgid "Please connect to or create a WordPress.com account to start using Jetpack. This will enable powerful security, traffic, and customization services."
-msgstr "Jetpack のご利用を開始するには、WordPress.com アカウントに接続するか、アカウントを作成してください。これにより、強力なセキュリティ、トラフィック、およびカスタマイズのサービスをご利用いただけるようになります。"
+msgstr "Jetpack のご利用を開始するには、WordPress.com アカウントに連携するか、アカウントを作成してください。これにより、強力なセキュリティ、トラフィック、およびカスタマイズのサービスをご利用いただけるようになります。"
 
 #: _inc/jetpack-strings.php:286
 msgid "Jetpack has many traffic and engagement tools to help you get more viewers to your site and keep them there."
@@ -1841,7 +1923,7 @@ msgstr "関連記事"
 
 #: _inc/jetpack-strings.php:275
 msgid "Jetpack harnesses the power of WordPress.com to show you detailed insights about your visitors, what they’re reading, and where they’re coming from."
-msgstr "Jetpack は WordPress.com のパワーを利用して、サイト訪問者に関する洞察や、どの部分を読んだか、どのルートで訪問したかなど、詳細な洞察を提示します。"
+msgstr "Jetpack は WordPress.com のパワーを利用して、サイト訪問者に関する洞察や、どの部分を読んだか、どのルートで訪問したかなど、詳細なインサイトを提示します。"
 
 #: _inc/jetpack-strings.php:273
 msgid "Jetpack blocks malicious log in attempts, lets you know if your site goes down, and can automatically update your plugins, so you don’t have to worry."
@@ -1926,12 +2008,12 @@ msgstr "保存中..."
 msgid "Save Settings"
 msgstr "設定を保存"
 
-#: _inc/jetpack-strings.php:241
+#: _inc/jetpack-strings.php:244
 msgctxt "Noun. Displayed to screen readers."
 msgid "Settings"
 msgstr "設定"
 
-#: _inc/jetpack-strings.php:244
+#: _inc/jetpack-strings.php:243
 msgid "Updates Needed"
 msgstr "更新が必要"
 
@@ -1939,7 +2021,7 @@ msgstr "更新が必要"
 msgid "Unlink me from WordPress.com"
 msgstr "WordPress.com へのリンク解除"
 
-#: _inc/jetpack-strings.php:239 _inc/jetpack-strings.php:295
+#: _inc/jetpack-strings.php:239 _inc/jetpack-strings.php:302
 msgid "Link to WordPress.com"
 msgstr "WordPress.com へのリンク"
 
@@ -2048,8 +2130,8 @@ msgstr "サイトのバックアップ"
 msgid "Keep your site backed up!"
 msgstr "サイトを常にバックアップしましょう !"
 
-#: _inc/jetpack-strings.php:130 _inc/jetpack-strings.php:196
-#: _inc/jetpack-strings.php:204 _inc/jetpack-strings.php:242
+#: _inc/jetpack-strings.php:123 _inc/jetpack-strings.php:196
+#: _inc/jetpack-strings.php:204 _inc/jetpack-strings.php:241
 msgid "Pro"
 msgstr "プロ"
 
@@ -2099,7 +2181,7 @@ msgstr "サイトは開発モードになっています"
 
 #: _inc/jetpack-strings.php:170
 msgid "Once you connect, you can upgrade to a paid plan in order to unlock world-class security, spam protection tools, and priority support."
-msgstr "接続が完了したら、プレミアムまたはプロ版にアップグレードできます。最高レベルのセキュリティ、スパム保護ツール、優先サポートをご利用いただけるようになります。"
+msgstr "連携が完了したら、プレミアムまたはプロ版にアップグレードできます。最高レベルのセキュリティ、スパム保護ツール、優先サポートをご利用いただけるようになります。"
 
 #: _inc/jetpack-strings.php:168
 msgid "State-of-the-art spam defense powered by Akismet."
@@ -2111,7 +2193,7 @@ msgstr "スパム統計を表示する"
 
 #: _inc/jetpack-strings.php:166
 msgid "Configure Akismet"
-msgstr "Akismet を構成する"
+msgstr "Akismet を設定"
 
 #: _inc/jetpack-strings.php:155 _inc/jetpack-strings.php:159
 #: _inc/jetpack-strings.php:163
@@ -2121,14 +2203,14 @@ msgstr "セキュリティダッシュボードを表示する"
 #: _inc/jetpack-strings.php:154 _inc/jetpack-strings.php:158
 #: _inc/jetpack-strings.php:162
 msgid "Configure VaultPress"
-msgstr "VaultPress を構成する"
+msgstr "VaultPress を設定"
 
 #: _inc/jetpack-strings.php:149
 msgid "Surveys & Polls"
 msgstr "アンケートと投票"
 
 #: _inc/jetpack-strings.php:148
-msgid "Unlimited surveys, unlimited responses. Use the survey editor to create surveys quickly and easily. Collect responses via your website, e-mail or on your iPad or iPhone."
+msgid "Unlimited surveys, unlimited responses. Use the survey editor to create surveys quickly and easily. Collect responses via your website, email or on your iPad or iPhone."
 msgstr "無制限のアンケート、無制限の回答。アンケートエディターを使用すると、アンケートを簡単に素早く作成できます。サイトやメールを通じて、または iPad や iPhone で回答を収集できます。"
 
 #: _inc/jetpack-strings.php:147
@@ -2175,35 +2257,35 @@ msgstr "優先サポートをご利用ください"
 msgid "Need help? A Happiness Engineer can answer questions about your site, your account or how to do about anything."
 msgstr "サポートが必要ですか ?サポートスタッフが、サイト、アカウントまたは操作方法についての質問にお答えします。"
 
-#: _inc/jetpack-strings.php:124
+#: _inc/jetpack-strings.php:130
 msgid "Connection Settings"
 msgstr "連携設定"
 
-#: _inc/jetpack-strings.php:123
+#: _inc/jetpack-strings.php:129
 msgid "Manage your Jetpack connection."
 msgstr "Jetpack 連携を管理しましょう。"
 
-#: _inc/jetpack-strings.php:122
+#: _inc/jetpack-strings.php:128
 msgid "The site is in Development Mode, so you can not connect to WordPress.com."
 msgstr "サイトは開発モードになっているため、WordPress.com と連携できません。"
 
-#: _inc/jetpack-strings.php:121
+#: _inc/jetpack-strings.php:127
 msgid "You are connected as "
 msgstr "連携済み:"
 
-#: _inc/jetpack-strings.php:120
+#: _inc/jetpack-strings.php:126
 msgid "Link your account to WordPress.com to get the most out of Jetpack."
 msgstr "Jetpack を最大限ご活用いただくため、アカウントを WordPress.com とリンクさせましょう。"
 
-#: _inc/jetpack-strings.php:132
+#: _inc/jetpack-strings.php:125
 msgid "Your site must be accessible by search engines for this feature to work properly. You can change this in {{a}}Reading Settings{{/a}}."
 msgstr "この機能を正常にご利用いただくには、検索エンジンがサイトにアクセスできる必要があります。この設定は、{{a}}表示設定{{/a}}から変更していただけます。"
 
-#: _inc/jetpack-strings.php:128
+#: _inc/jetpack-strings.php:121
 msgid "View {{a}}All Stats{{/a}}"
 msgstr "{{a}}すべての統計情報{{/a}}を表示する"
 
-#: _inc/jetpack-strings.php:127
+#: _inc/jetpack-strings.php:120
 msgid "View your {{a}}Email Followers{{/a}}"
 msgstr "{{a}}メールフォロワー{{/a}}を表示する"
 
@@ -2311,197 +2393,197 @@ msgstr "WordPress.com for Windows"
 msgid "WordPress.com for Linux"
 msgstr "WordPress.com for Linux"
 
-#: _inc/jetpack-strings.php:92
+#: _inc/jetpack-strings.php:87
 msgid "Site Verification Tools"
 msgstr "サイト検証ツール"
 
-#: _inc/jetpack-strings.php:91
+#: _inc/jetpack-strings.php:86
 msgid "Site Verification Tools are active. Ensure your site is verified with Google, Bing, and Pinterest for more accurate indexing and ranking. {{a}}Verify now{{/a}}"
 msgstr "サイト検証ツールは有効です。サイトをより正確にインデックスしてランク付けするために、Google、Bing、および Pinterest で検証されていることを確認してください。{{a}}すぐに検証する{{/a}}"
 
-#: _inc/jetpack-strings.php:90
+#: _inc/jetpack-strings.php:85
 msgid "{{a}}Activate Site Verification{{/a}} to verify your site and increase ranking with Google, Bing, and Pinterest."
 msgstr "{{a}}サイト検証を有効化{{/a}}すると、サイトを検証し、Google、Bing、および Pinterest でランクをアップさせることができます。"
 
-#: _inc/jetpack-strings.php:89
+#: _inc/jetpack-strings.php:84
 msgid "Malware Scanning"
 msgstr "マルウェアスキャン"
 
-#: _inc/jetpack-strings.php:87
+#: _inc/jetpack-strings.php:82
 msgid "Threats found"
 msgstr "検出された脅威"
 
-#: _inc/jetpack-strings.php:86
+#: _inc/jetpack-strings.php:81
 msgid "Uh oh, %(number)s threat found."
 msgid_plural "Uh oh, %(number)s threats found."
 msgstr[0] "%(number)s個の脅威が見つかりました。"
 
-#: _inc/jetpack-strings.php:85
+#: _inc/jetpack-strings.php:80
 msgid "{{a}}View details at VaultPress.com{{/a}}"
 msgstr "{{a}}VaultPress.com で詳細を確認する{{/a}}"
 
-#: _inc/jetpack-strings.php:84
+#: _inc/jetpack-strings.php:79
 msgid "{{a}}Contact Support{{/a}}"
 msgstr "{{a}}サポート{{/a}}"
 
-#: _inc/jetpack-strings.php:83
+#: _inc/jetpack-strings.php:78
 msgid "No threats found, you're good to go!"
 msgstr "脅威は見つかりませんでした。問題ありません。"
 
-#: _inc/jetpack-strings.php:82
+#: _inc/jetpack-strings.php:77
 msgid "For automated, comprehensive scanning of security threats, please {{a}}install and activate{{/a}} VaultPress."
 msgstr "セキュリティ脅威の包括的な自動スキャンをご利用いただくには、VaultPress を{{a}}インストールおよび有効化{{/a}}してください。"
 
-#: _inc/jetpack-strings.php:81
+#: _inc/jetpack-strings.php:76
 msgid "For automated, comprehensive scanning of security threats, please {{a}}upgrade your account{{/a}}."
 msgstr "セキュリティ脅威の包括的な自動スキャンをご利用いただくには、{{a}}アカウントをアップグレード{{/a}}してください。"
 
-#: _inc/jetpack-strings.php:79
+#: _inc/jetpack-strings.php:74
 msgid "Jetpack is actively blocking malicious login attempts. Data will display here soon!"
 msgstr "Jetpack は悪意のあるログイン試行をブロックしています。間もなくこちらに日付が表示されます !"
 
-#: _inc/jetpack-strings.php:78
+#: _inc/jetpack-strings.php:73
 msgid "Total malicious attacks blocked on your site."
 msgstr "サイトでブロックされた悪意のある攻撃の合計数。"
 
-#: _inc/jetpack-strings.php:76
+#: _inc/jetpack-strings.php:71
 msgid "{{a}}Activate Protect{{/a}} to keep your site protected from malicious login attempts."
 msgstr "{{a}}保護を有効化{{/a}}して、悪意のあるログイン試行からサイトを常に保護しましょう。"
 
-#: _inc/jetpack-strings.php:75
+#: _inc/jetpack-strings.php:70
 msgid "Plugin Updates"
 msgstr "プラグイン更新"
 
-#: _inc/jetpack-strings.php:73
+#: _inc/jetpack-strings.php:68
 msgid "%(number)s plugin"
 msgid_plural "%(number)s plugins"
 msgstr[0] "%(number)s 件のプラグイン"
 
-#: _inc/jetpack-strings.php:72
+#: _inc/jetpack-strings.php:67
 msgid "Needs updating. "
 msgid_plural "Need updating. "
 msgstr[0] "更新が必要です。"
 
-#: _inc/jetpack-strings.php:71
+#: _inc/jetpack-strings.php:66
 msgid "{{a}}Turn on plugin auto updates{{/a}}"
 msgstr "{{a}}プラグインの自動更新をオンにする{{/a}}"
 
-#: _inc/jetpack-strings.php:70
+#: _inc/jetpack-strings.php:65
 msgid "{{a}}Activate Manage and turn on auto updates{{/a}}"
 msgstr "{{a}}管理を有効にして自動更新をオンにする{{/a}}"
 
-#: _inc/jetpack-strings.php:69
+#: _inc/jetpack-strings.php:64
 msgid "All plugins are up-to-date. Awesome work!"
 msgstr "すべてのプラグインは最新です。素晴らしいです !"
 
-#: _inc/jetpack-strings.php:68
+#: _inc/jetpack-strings.php:63
 msgid "{{a}}Activate Manage{{/a}} to turn on auto updates and manage your plugins from WordPress.com."
 msgstr "{{a}}管理を有効化{{/a}}して自動更新をオンにし、WordPress.com のプラグインを管理しましょう。"
 
-#: _inc/jetpack-strings.php:67
+#: _inc/jetpack-strings.php:62
 msgid "Image Performance %(photon)s"
 msgstr "画像のパフォーマンス %(photon)s"
 
-#: _inc/jetpack-strings.php:66
+#: _inc/jetpack-strings.php:61
 msgid "Jetpack is improving and optimizing your image speed."
 msgstr "Jetpack は画像の表示速度を向上・最適化しています。"
 
-#: _inc/jetpack-strings.php:64
+#: _inc/jetpack-strings.php:59
 msgid "{{a}}Activate Photon{{/a}} to enhance the performance and speed of your images."
 msgstr "{{a}}Photon を有効にする{{/a}}と、パフォーマンスの強化と画像処理のスピードアップを実現できます。"
 
-#: _inc/jetpack-strings.php:63
+#: _inc/jetpack-strings.php:58
 msgid "Downtime Monitoring"
 msgstr "ダウンタイムのモニター"
 
-#: _inc/jetpack-strings.php:62
+#: _inc/jetpack-strings.php:57
 msgid "Jetpack is monitoring your site. If we think your site is down, you will receive an email."
 msgstr "Jetpack がサイトを監視中です。サイトがダウンしていると判断した場合には、メールをお送りします。"
 
-#: _inc/jetpack-strings.php:60
+#: _inc/jetpack-strings.php:55
 msgid "{{a}}Activate Monitor{{/a}} to receive notifications if your site goes down."
 msgstr "{{a}}モニターを有効化{{/a}}すると、サイトがダウンした場合に通知を受け取れます。"
 
-#: _inc/jetpack-strings.php:59
+#: _inc/jetpack-strings.php:54
 msgid "Security"
 msgstr "セキュリティ"
 
-#: _inc/jetpack-strings.php:58
+#: _inc/jetpack-strings.php:53
 msgid "Manage security on WordPress.com"
 msgstr "WordPress.com でセキュリティを管理"
 
-#: _inc/jetpack-strings.php:57 class.jetpack-connection-banner.php:213
+#: _inc/jetpack-strings.php:52 class.jetpack-connection-banner.php:213
 msgid "Performance"
 msgstr "パフォーマンス"
 
-#: _inc/jetpack-strings.php:56 _inc/jetpack-strings.php:165
+#: _inc/jetpack-strings.php:51 _inc/jetpack-strings.php:165
 msgid "Backups"
 msgstr "バックアップ"
 
-#: _inc/jetpack-strings.php:54
+#: _inc/jetpack-strings.php:49
 msgid "{{a}}View backup details{{/a}}."
 msgstr "{{a}}バックアップの詳細を表示{{/a}}."
 
-#: _inc/jetpack-strings.php:53
+#: _inc/jetpack-strings.php:48
 msgid "To automatically back up your entire site, please {{a}}install and activate{{/a}} VaultPress."
 msgstr "サイト全体を自動でバックアップするには、VaultPress を{{a}}インストールおよび有効化{{/a}}してください。"
 
-#: _inc/jetpack-strings.php:52
+#: _inc/jetpack-strings.php:47
 msgid "To automatically back up your entire site, please {{a}}upgrade!{{/a}}."
 msgstr "サイト全体を自動でバックアップするには、{{a}}アップグレード{{/a}}を実行してください。"
 
-#: _inc/jetpack-strings.php:51 _inc/jetpack-strings.php:61
-#: _inc/jetpack-strings.php:80
+#: _inc/jetpack-strings.php:46 _inc/jetpack-strings.php:56
+#: _inc/jetpack-strings.php:75
 msgid "Unavailable in Dev Mode."
 msgstr "開発モードではご利用いただけません。"
 
-#: _inc/jetpack-strings.php:50 _inc/jetpack-strings.php:169
+#: _inc/jetpack-strings.php:45 _inc/jetpack-strings.php:169
 msgid "Spam Protection"
 msgstr "スパム対策"
 
-#: _inc/jetpack-strings.php:49 _inc/jetpack-strings.php:55
-#: _inc/jetpack-strings.php:74 _inc/jetpack-strings.php:88
+#: _inc/jetpack-strings.php:44 _inc/jetpack-strings.php:50
+#: _inc/jetpack-strings.php:69 _inc/jetpack-strings.php:83
 msgid "Loading…"
 msgstr "読み込み中…"
 
-#: _inc/jetpack-strings.php:48
+#: _inc/jetpack-strings.php:43
 msgid "For state-of-the-art spam defense, please {{a}}install Akismet{{/a}}."
 msgstr "スパムへの最新式の防御を活用するには、{{a}}Akismet をインストール{{/a}}してください。"
 
-#: _inc/jetpack-strings.php:47
+#: _inc/jetpack-strings.php:42
 msgid "For state-of-the-art spam defense, please {{a}}activate Akismet{{/a}}."
 msgstr "スパムへの最新式の防御を活用するには、{{a}}Akismet を有効化{{/a}}してください。"
 
-#: _inc/jetpack-strings.php:46 _inc/jetpack-strings.php:191
+#: _inc/jetpack-strings.php:41 _inc/jetpack-strings.php:191
 msgid "Invalid Key"
 msgstr "無効なキー"
 
-#: _inc/jetpack-strings.php:45
+#: _inc/jetpack-strings.php:40
 msgid "Whoops! Your Akismet key is missing or invalid. {{akismetSettings}}Go to Akismet settings to fix{{/akismetSettings}}."
 msgstr "エラー:Akismet キーが欠落しているか、無効です。{{akismetSettings}}Akismet の設定で修正してください{{/akismetSettings}}。"
 
-#: _inc/jetpack-strings.php:44
+#: _inc/jetpack-strings.php:39
 msgctxt "Example: \"412 Spam comments blocked\""
 msgid "Spam comments blocked."
 msgstr "スパムコメントがブロックされました。"
 
-#: _inc/jetpack-strings.php:43 _inc/jetpack-strings.php:65
-#: _inc/jetpack-strings.php:77 _inc/jetpack-strings.php:126
-#: _inc/jetpack-strings.php:131 _inc/jetpack-strings.php:193
+#: _inc/jetpack-strings.php:60 _inc/jetpack-strings.php:72
+#: _inc/jetpack-strings.php:92 _inc/jetpack-strings.php:124
+#: _inc/jetpack-strings.php:132 _inc/jetpack-strings.php:193
 #: _inc/jetpack-strings.php:197 _inc/jetpack-strings.php:205
 #: _inc/jetpack-strings.php:212 _inc/jetpack-strings.php:230
 msgid "Unavailable in Dev Mode"
 msgstr "開発モードではご利用いただけません"
 
-#: _inc/jetpack-strings.php:41
+#: _inc/jetpack-strings.php:90
 msgid "Holiday Snow"
 msgstr "ホリデーの雪"
 
-#: _inc/jetpack-strings.php:40
+#: _inc/jetpack-strings.php:89
 msgid "Show falling snow in the holiday period."
 msgstr "ホリデー期間に雪が降る様子を表示します。"
 
-#: _inc/jetpack-strings.php:39
+#: _inc/jetpack-strings.php:88
 msgid "Show falling snow on my blog from Dec 1st until Jan 4th."
 msgstr "12月1日から1月4日まで、ブログに雪が降る様子を表示します。"
 
@@ -2602,13 +2684,13 @@ msgstr "概要"
 msgid "At A Glance"
 msgstr "概要"
 
-#: _inc/jetpack-strings.php:11 _inc/jetpack-strings.php:425
-#: _inc/jetpack-strings.php:428
+#: _inc/jetpack-strings.php:11 _inc/jetpack-strings.php:329
+#: _inc/jetpack-strings.php:332
 msgctxt "Navigation item."
 msgid "Apps"
 msgstr "アプリ"
 
-#: _inc/jetpack-strings.php:10 _inc/jetpack-strings.php:427
+#: _inc/jetpack-strings.php:10 _inc/jetpack-strings.php:331
 msgctxt "Navigation item."
 msgid "Plans"
 msgstr "プラン"
@@ -2856,7 +2938,7 @@ msgstr "ポートフォリオアーカイブコンテンツ"
 msgid "Portfolio Archive Title"
 msgstr "ポートフォリオアーカイブタイトル"
 
-#: class.jetpack.php:6178
+#: class.jetpack.php:6183
 msgid "This user is linked and ready to fly with Jetpack."
 msgstr "このユーザーはリンク済みで、Jetpack の準備が完了しています。"
 
@@ -2866,7 +2948,7 @@ msgstr "確認中"
 
 #: class.jetpack.php:4354
 msgid "For more help, try our <a href=\"%1$s\">connection debugger</a> or <a href=\"%2$s\" target=\"_blank\">troubleshooting tips</a>."
-msgstr "ヘルプが必要な場合は、<a href=\"%1$s\">接続デバッガ</a>または<a href=\"%2$s\" target=\"_blank\">トラブルシューティングのヒント</a>をお試しください。"
+msgstr "ヘルプが必要な場合は、<a href=\"%1$s\">連携デバッガ</a>または<a href=\"%2$s\" target=\"_blank\">トラブルシューティングのヒント</a>をお試しください。"
 
 #: class.jetpack.php:4350 class.jetpack.php:4376
 msgid "Try again"
@@ -3112,15 +3194,15 @@ msgstr "Wufoo フォームに記入してください !"
 msgid "<a href=\"%s\" target=\"_blank\">Learn more</a> about these options."
 msgstr "これらの設定について<a href=\"%s\" target=\"_blank\">さらに詳しく</a>読む。"
 
-#: _inc/jetpack-strings.php:313
+#: _inc/jetpack-strings.php:320
 msgid "There was an issue connecting your Jetpack. Please click \"Connect to WordPress.com\" again."
 msgstr "Jetpack との連携時に問題が発生しました。「WordPress.com と連携」をもう一度クリックしてください。"
 
-#: _inc/jetpack-strings.php:314
+#: _inc/jetpack-strings.php:321
 msgid "We had an issue connecting Jetpack; deactivate then reactivate the Jetpack plugin, then connect again."
 msgstr "Jetpack との連携時に問題が発生しました。Jetpack を無効にしてから再び有効にした後、再度連携してください。"
 
-#: _inc/jetpack-strings.php:315
+#: _inc/jetpack-strings.php:322
 msgid "You need to stay logged in to your WordPress blog while you authorize Jetpack."
 msgstr "Jetpack 認証では WordPress ブログにログインしたままであることが必要です。"
 
@@ -3297,11 +3379,11 @@ msgctxt "Module Name"
 msgid "Sitemaps"
 msgstr "サイトマップ"
 
-#: modules/contact-form/grunion-contact-form.php:2334
+#: modules/contact-form/grunion-contact-form.php:2335
 msgid "%s requires at least one selection"
 msgstr "%s は最低ひとつ選択することが必須です。"
 
-#: _inc/jetpack-strings.php:308
+#: _inc/jetpack-strings.php:315
 msgid "{{s}}Your Jetpack has a glitch.{{/s}}  We're sorry for the inconvenience. Please try again later, if the issue continues please contact support with this message: %(error_key)s"
 msgstr "{{s}}Jetpack にエラーが発生しています。{{/s}}ご不便をおかけして申し訳ございません。しばらく経ってからもう一度お試しください。エラーが続く場合は、次のメッセージを含めてサポートにご連絡ください。%(error_key)s"
 
@@ -3670,9 +3752,9 @@ msgstr "Automattic"
 msgid "Bring the power of the WordPress.com cloud to your self-hosted WordPress. Jetpack enables you to connect your blog to a WordPress.com account to use the powerful features normally only available to WordPress.com users."
 msgstr "WordPress.com クラウドサービスのパワーをインストール型 WordPress にも取り入れましょう。Jetpack を使えば、ブログを WordPress.com アカウントと連携させ、便利な機能を利用できます。"
 
-#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.1)  #-#-#-#-#
+#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.2)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.1)  #-#-#-#-#
+#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.2)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://jetpack.com"
 msgstr "http://jetpack.com"
@@ -3683,7 +3765,7 @@ msgstr "保護ホワイトリスト"
 
 #: views/admin/network-settings.php:31
 msgid "Allow individual site administrators to manage their own connections (connect and disconnect) to <a href=\"//wordpress.com\">WordPress.com</a>"
-msgstr "サイト管理者が各自で <a href=\"//wordpress.com\">WordPress.com</a> との連携接続・解除をできるようにします"
+msgstr "サイト管理者が各自で <a href=\"//wordpress.com\">WordPress.com</a> との連携・解除をできるようにします"
 
 #: views/admin/network-settings.php:28
 msgid "Sub-site override"
@@ -3841,7 +3923,7 @@ msgstr "WordPress.com でこれらの機能をお試し"
 msgid "Link your account to WordPress.com"
 msgstr "アカウントを WordPress.com に連携"
 
-#: _inc/jetpack-strings.php:324
+#: _inc/jetpack-strings.php:297
 msgid "Jump Start your Site"
 msgstr "サイトのジャンプスタート"
 
@@ -4856,28 +4938,28 @@ msgstr "ロゴに設定"
 msgid "Add logo"
 msgstr "ロゴを追加"
 
-#: modules/theme-tools/featured-content.php:504
+#: modules/theme-tools/featured-content.php:522
 msgid "The settings for Featured Content have <a href=\"%s\">moved to Appearance &rarr; Customize</a>."
 msgstr "おすすめコンテンツの設定は「<a href=\"%s\">外観 &rarr; カスタマイズ</a>」に移動しました。"
 
-#: modules/theme-tools/featured-content.php:485
+#: modules/theme-tools/featured-content.php:503
 msgid "Display tag content in all listings."
 msgstr "すべてのリストでタグコンテンツを表示します。"
 
-#: modules/theme-tools/featured-content.php:478
+#: modules/theme-tools/featured-content.php:496
 msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr "投稿メタおよびタグクラウドでタグを非表示にする。"
 
-#: modules/theme-tools/featured-content.php:472
+#: modules/theme-tools/featured-content.php:490
 msgid "Tag name"
 msgstr "タグ名"
 
-#: modules/theme-tools/featured-content.php:445
+#: modules/theme-tools/featured-content.php:463
 msgid "Easily feature all posts with the <a href=\"%1$s\">\"featured\" tag</a> or a tag of your choice. Your theme supports up to %2$s posts in its featured content area."
 msgstr "<a href=”%1$s”>\"featured\" タグ</a>または自分で選択したタグのついているすべての投稿を簡単に「おすすめ」表示できます。現在お使いのテーマでは、おすすめコンテンツエリアに最大%2$s件の投稿が表示されるようになっています。"
 
-#: modules/theme-tools/featured-content.php:431
-#: modules/theme-tools/featured-content.php:444
+#: modules/theme-tools/featured-content.php:449
+#: modules/theme-tools/featured-content.php:462
 msgid "Featured Content"
 msgstr "おすすめコンテンツ"
 
@@ -5011,7 +5093,7 @@ msgstr "コメントフォームに「コメントをフォロー」オプショ
 #: _inc/lib/class.core-rest-api-endpoints.php:1364
 #: modules/subscriptions.php:328
 msgid "Show a <em>'follow blog'</em> option in the comment form"
-msgstr "コメントフォームに「ブログをフォロー」オプションを表示する"
+msgstr "コメントフォームに「ブログをフォロー」オプションを表示"
 
 #: modules/subscriptions.php:313
 msgid "Change whether your visitors can subscribe to your posts or comments or both."
@@ -5156,7 +5238,7 @@ msgstr "この画像は統計情報の集計に使われますが、隠しても
 msgid "Hide the stats smiley face image."
 msgstr "統計のスマイル画像を非表示"
 
-#: _inc/jetpack-strings.php:392 modules/stats.php:599
+#: _inc/jetpack-strings.php:397 modules/stats.php:599
 msgid "Smiley"
 msgstr "スマイル"
 
@@ -5208,7 +5290,7 @@ msgstr "ヘッダーがすでに送信されているため、Cookie 転送を�
 msgid "Match by Email"
 msgstr "メール照合"
 
-#: _inc/jetpack-strings.php:379 _inc/lib/class.core-rest-api-endpoints.php:1348
+#: _inc/jetpack-strings.php:384 _inc/lib/class.core-rest-api-endpoints.php:1348
 #: modules/sso.php:263
 msgid "Require Two-Step Authentication"
 msgstr "二段階認証が必須です"
@@ -5576,12 +5658,12 @@ msgstr "メール"
 msgid " (Opens in new window)"
 msgstr " (新しいウィンドウで開きます)"
 
-#: modules/sharedaddy/sharing-service.php:719
+#: modules/sharedaddy/sharing-service.php:721
 #: modules/videopress/videopress.php:638
 msgid "Share"
 msgstr "共有"
 
-#: modules/sharedaddy/sharing-service.php:717
+#: modules/sharedaddy/sharing-service.php:719
 #: modules/sharedaddy/sharing.php:277 modules/sharedaddy/sharing.php:310
 msgid "More"
 msgstr "続き"
@@ -5599,8 +5681,8 @@ msgstr "高度な設定です。このオプションがチェックされてい
 msgid "Disable CSS and JS"
 msgstr "CSS と JavaScript を無効化"
 
-#. translators: included in e-mail when post is shared via e-mail. First item
-#. is sender's name. Second is sender's e-mail address.
+#. translators: included in email when post is shared via email. First item is
+#. sender's name. Second is sender's email address.
 #: modules/sharedaddy/sharedaddy.php:68
 msgid "%1$s (%2$s) thinks you may be interested in the following post:"
 msgstr "%1$s (%2$s) さんが以下の投稿をおすすめしています。"
@@ -5633,50 +5715,50 @@ msgstr "シークレットパラメーターの引数が無効か、不正な形
 msgid "The secret parameter is missing"
 msgstr "シークレットパラメーターが指定されていません"
 
-#: modules/related-posts/jetpack-related-posts.php:1198
+#: modules/related-posts/jetpack-related-posts.php:1200
 msgid "Similar post"
 msgstr "類似投稿"
 
-#: modules/related-posts/jetpack-related-posts.php:1193
+#: modules/related-posts/jetpack-related-posts.php:1195
 msgid "With 1 comment"
 msgid_plural "With %s comments"
 msgstr[0] "%s件のコメント"
 
-#: modules/related-posts/jetpack-related-posts.php:1149
-#: modules/related-posts/jetpack-related-posts.php:1172
+#: modules/related-posts/jetpack-related-posts.php:1151
+#: modules/related-posts/jetpack-related-posts.php:1174
 msgctxt "in {category/tag name}"
 msgid "In \"%s\""
 msgstr "%s"
 
-#: modules/related-posts/jetpack-related-posts.php:860
+#: modules/related-posts/jetpack-related-posts.php:862
 msgid "Untitled Post"
 msgstr "無題の投稿"
 
-#: modules/related-posts/jetpack-related-posts.php:360
+#: modules/related-posts/jetpack-related-posts.php:362
 msgid "Show related content after posts"
 msgstr "投稿の後に関連コンテンツを表示"
 
-#: modules/related-posts/jetpack-related-posts.php:358
+#: modules/related-posts/jetpack-related-posts.php:360
 msgid "Hide related content after posts"
 msgstr "投稿後の関連コンテンツ表示をしない"
 
-#: modules/related-posts/jetpack-related-posts.php:331
+#: modules/related-posts/jetpack-related-posts.php:333
 msgid "Preview:"
 msgstr "プレビュー:"
 
-#: _inc/jetpack-strings.php:404 _inc/lib/class.core-rest-api-endpoints.php:1387
-#: modules/related-posts/jetpack-related-posts.php:330
+#: _inc/jetpack-strings.php:409 _inc/lib/class.core-rest-api-endpoints.php:1387
+#: modules/related-posts/jetpack-related-posts.php:332
 msgid "Use a large and visually striking layout"
 msgstr "視覚的インパクトがある大きめのレイアウトを使う"
 
-#: _inc/jetpack-strings.php:405 _inc/lib/class.core-rest-api-endpoints.php:1380
-#: modules/related-posts/jetpack-related-posts.php:328
+#: _inc/jetpack-strings.php:410 _inc/lib/class.core-rest-api-endpoints.php:1380
+#: modules/related-posts/jetpack-related-posts.php:330
 msgid "Show a \"Related\" header to more clearly separate the related section from posts"
 msgstr "関連記事と投稿の区別がつきやすいよう「関連」見出しを表示する"
 
-#: _inc/jetpack-strings.php:406
-#: modules/related-posts/jetpack-related-posts.php:190
-#: modules/related-posts/jetpack-related-posts.php:386
+#: _inc/jetpack-strings.php:411
+#: modules/related-posts/jetpack-related-posts.php:191
+#: modules/related-posts/jetpack-related-posts.php:388
 msgid "Related"
 msgstr "関連"
 
@@ -5942,7 +6024,7 @@ msgstr "IPv4 および IPv6 を指定できます。<br />範囲を指定する�
 msgid "Your current IP: %s"
 msgstr "あなたの現在の IP: %s"
 
-#: _inc/jetpack-strings.php:385 modules/protect/config-ui.php:50
+#: _inc/jetpack-strings.php:390 modules/protect/config-ui.php:50
 msgid "Make sure to add your most frequently used IP addresses as they can change between your home, office or other locations. Removing an IP address from the list below will remove it from your whitelist."
 msgstr "IP アドレスは自宅や職場、その他の場所で異なる場合があるため、最も頻繁に使用する IP アドレスを追加するようにしてください。以下のリストから IP アドレスを削除すると、ホワイトリストからも削除されます。"
 
@@ -5963,7 +6045,7 @@ msgstr "ホワイトリストを保存しました。"
 msgid "One of your IP addresses was not valid."
 msgstr "無効な IP アドレスが含まれていました。"
 
-#: _inc/jetpack-strings.php:387 modules/protect/config-ui.php:30
+#: _inc/jetpack-strings.php:392 modules/protect/config-ui.php:30
 msgid "Whitelist Management"
 msgstr "ホワイトリスト管理"
 
@@ -6021,7 +6103,7 @@ msgstr "詳細情報"
 msgid "Enable Post By Email"
 msgstr "メール投稿を有効化"
 
-#: _inc/jetpack-strings.php:363 _inc/lib/class.core-rest-api-endpoints.php:1227
+#: _inc/jetpack-strings.php:368 _inc/lib/class.core-rest-api-endpoints.php:1227
 #: modules/post-by-email.php:89 modules/subscriptions.php:982
 msgid "Email Address"
 msgstr "メールアドレス"
@@ -6149,6 +6231,10 @@ msgstr "タイルギャラリー"
 msgid "Post by Email"
 msgstr "メール投稿"
 
+#: modules/custom-css/custom-css-4.7.php:147
+msgid "Custom CSS"
+msgstr "カスタム CSS"
+
 #: modules/module-info.php:314
 msgid ""
 "With Carousel active, any standard WordPress galleries you have embedded in posts or pages will\n"
@@ -6177,7 +6263,7 @@ msgstr "パブリサイズ共有についての詳細。"
 msgid "Publicize"
 msgstr "パブリサイズ共有 "
 
-#: _inc/jetpack-strings.php:224 class.jetpack.php:6030 modules/stats.php:283
+#: _inc/jetpack-strings.php:224 class.jetpack.php:6035 modules/stats.php:283
 #: modules/stats.php:370 modules/stats.php:742
 msgid "Site Stats"
 msgstr "サイト統計情報"
@@ -6295,7 +6381,7 @@ msgstr "購読"
 #: modules/module-headings.php:171
 msgctxt "Module Description"
 msgid "Collect traffic stats and insights."
-msgstr "トラフィックの統計情報とまとめを収集。"
+msgstr "トラフィックの統計情報とインサイトを収集します。"
 
 #: modules/module-headings.php:170
 msgctxt "Module Name"
@@ -6345,7 +6431,7 @@ msgstr "Twitter、Facebook、および Google+ ボタンがそれぞれの投稿
 #: modules/module-headings.php:144
 msgctxt "Module Description"
 msgid "Visitors can share your content."
-msgstr "読者がコンテンツをシェア可能に。"
+msgstr "読者がコンテンツをシェアできるようにします。"
 
 #: modules/module-headings.php:143
 msgctxt "Module Name"
@@ -6360,7 +6446,7 @@ msgstr "関連する新しいコンテンツを公開された各投稿の下部
 #: modules/module-headings.php:132
 msgctxt "Module Description"
 msgid "Display similar content."
-msgstr "似たコンテンツを表示。"
+msgstr "似たコンテンツを表示します。"
 
 #: modules/module-headings.php:131
 msgctxt "Module Name"
@@ -6370,7 +6456,7 @@ msgstr "関連投稿"
 #: modules/module-headings.php:127
 msgctxt "Module Description"
 msgid "Automatically promote content."
-msgstr "自動的にコンテンツを宣伝。"
+msgstr "自動的にコンテンツを宣伝します。"
 
 #: modules/module-headings.php:126
 msgctxt "Module Name"
@@ -6640,7 +6726,7 @@ msgstr "おすすめ画像を表示します"
 msgid "Hide all featured images"
 msgstr "すべてのおすすめ画像を非表示にします"
 
-#: _inc/jetpack-strings.php:372 _inc/lib/class.core-rest-api-endpoints.php:1194
+#: _inc/jetpack-strings.php:377 _inc/lib/class.core-rest-api-endpoints.php:1194
 #: modules/minileven.php:74
 msgid "Featured Images"
 msgstr "アイキャッチ画像"
@@ -6653,7 +6739,7 @@ msgstr "フロントページとアーカイブページで全文を表示する
 msgid "Enable excerpts on front page and on archive pages"
 msgstr "フロントページとアーカイブページで抜粋を有効化する"
 
-#: _inc/jetpack-strings.php:373 _inc/lib/class.core-rest-api-endpoints.php:1179
+#: _inc/jetpack-strings.php:378 _inc/lib/class.core-rest-api-endpoints.php:1179
 #: modules/minileven.php:60
 msgid "Excerpts"
 msgstr "抜粋"
@@ -7196,7 +7282,7 @@ msgstr "お客様の推薦文"
 msgid "Testimonial pages display at most %1$s testimonials"
 msgstr "推薦文ページに最近%1$s件の推薦文を表示する"
 
-#: _inc/jetpack-strings.php:354 modules/custom-post-types/testimonial.php:159
+#: _inc/jetpack-strings.php:359 modules/custom-post-types/testimonial.php:159
 msgid "Enable Testimonials for this site."
 msgstr "このサイトで推薦文を有効化する。"
 
@@ -7414,7 +7500,7 @@ msgstr "ポートフォリオ項目"
 msgid "Portfolio pages display at most %1$s projects"
 msgstr "ポートフォリオページに最大 %1$s プロジェクトを表示"
 
-#: _inc/jetpack-strings.php:355 modules/custom-post-types/portfolios.php:131
+#: _inc/jetpack-strings.php:360 modules/custom-post-types/portfolios.php:131
 msgid "Enable Portfolio Projects for this site."
 msgstr "このサイトでポートフォリオプロジェクトを有効化する。"
 
@@ -7926,7 +8012,7 @@ msgstr "スタイルシートを保存"
 msgid "Save &amp; Buy Upgrade"
 msgstr "保存 &amp; アップグレード購入"
 
-#: _inc/jetpack-strings.php:403 modules/custom-css/custom-css.php:1229
+#: _inc/jetpack-strings.php:408 modules/custom-css/custom-css.php:1229
 #: modules/custom-post-types/comics.php:266
 #: modules/videopress/videopress.php:665
 msgid "Preview"
@@ -7952,6 +8038,7 @@ msgstr "追加"
 msgid "Mode:"
 msgstr "モード:"
 
+#: modules/custom-css/custom-css-4.7.php:604
 #: modules/custom-css/custom-css.php:1153
 #: modules/custom-css/custom-css.php:1158 modules/videopress/videopress.php:272
 #: modules/widgets/image-widget.php:216
@@ -8025,10 +8112,16 @@ msgstr "スタイルシートを保存しました。"
 msgid "Custom CSS Stylesheet"
 msgstr "カスタム CSS スタイルシート"
 
+#: modules/custom-css/custom-css-4.7.php:69
+#: modules/custom-css/custom-css-4.7.php:72
+#: modules/custom-css/custom-css-4.7.php:100
+#: modules/custom-css/custom-css-4.7.php:161
 #: modules/custom-css/custom-css.php:915
 msgid "CSS"
 msgstr "CSS"
 
+#: modules/custom-css/custom-css-4.7.php:69
+#: modules/custom-css/custom-css-4.7.php:72
 #: modules/custom-css/custom-css.php:902
 msgid "Edit CSS"
 msgstr "CSS 編集"
@@ -8274,48 +8367,48 @@ msgctxt "Label for HTML form \"Name\" field in contact form builder"
 msgid "Name"
 msgstr "名前"
 
-#: modules/contact-form/grunion-contact-form.php:2451
+#: modules/contact-form/grunion-contact-form.php:2452
 #: modules/minileven/minileven.php:278
 msgid "Yes"
 msgstr "はい"
 
-#: modules/contact-form/grunion-contact-form.php:2417
+#: modules/contact-form/grunion-contact-form.php:2418
 msgid "(required)"
 msgstr "(必須)"
 
-#: modules/contact-form/grunion-contact-form.php:2340
+#: modules/contact-form/grunion-contact-form.php:2341
 msgid "%s is required"
 msgstr "%s は必須項目です。"
 
-#: modules/contact-form/grunion-contact-form.php:2328
+#: modules/contact-form/grunion-contact-form.php:2329
 msgid "%s requires a valid email address"
 msgstr "「%s」欄には正しいメールアドレスが必要です。"
 
-#: modules/contact-form/grunion-contact-form.php:2073
+#: modules/contact-form/grunion-contact-form.php:2074
 msgid "Sent by an unverified visitor to your site."
 msgstr "認証されていないサイト訪問者から送信されました。"
 
-#: modules/contact-form/grunion-contact-form.php:2067
+#: modules/contact-form/grunion-contact-form.php:2068
 msgid "Sent by a verified %s user."
 msgstr "認証済みの %s ユーザーから送信されました。"
 
-#: modules/contact-form/grunion-contact-form.php:2059
+#: modules/contact-form/grunion-contact-form.php:2060
 msgid "Contact Form URL:"
 msgstr "お問い合せフォーム URL:"
 
-#: modules/contact-form/grunion-contact-form.php:2058
+#: modules/contact-form/grunion-contact-form.php:2059
 msgid "IP Address:"
 msgstr "IP アドレス:"
 
-#: modules/contact-form/grunion-contact-form.php:2057
+#: modules/contact-form/grunion-contact-form.php:2058
 msgid "Time:"
 msgstr "時間:"
 
-#: modules/contact-form/grunion-contact-form.php:1450
+#: modules/contact-form/grunion-contact-form.php:1451
 msgid "go back"
 msgstr "戻る"
 
-#: modules/contact-form/grunion-contact-form.php:1435
+#: modules/contact-form/grunion-contact-form.php:1436
 msgid "Error!"
 msgstr "エラーが発生しました。"
 
@@ -8360,7 +8453,7 @@ msgid "Feedback discarded."
 msgstr "フィードバックを削除しました。"
 
 #: modules/contact-form/grunion-contact-form.php:329
-#: modules/contact-form/grunion-contact-form.php:1449
+#: modules/contact-form/grunion-contact-form.php:1450
 msgid "Message Sent"
 msgstr "メッセージを送信しました。"
 
@@ -8407,7 +8500,7 @@ msgid "You are not allowed to move this item out of the Trash."
 msgstr "この項目をゴミ箱から移動する権限がありません。"
 
 #: modules/contact-form/admin.php:481
-#: modules/contact-form/grunion-contact-form.php:1997
+#: modules/contact-form/grunion-contact-form.php:1998
 msgctxt "{$date_format} \\a\\t {$time_format}"
 msgid "%1$s \\a\\t %2$s"
 msgstr "%1$s%2$s"
@@ -8524,7 +8617,7 @@ msgstr "読者にコメントを促すメッセージ"
 msgid "Adjust your Comments form with a clever greeting and color-scheme."
 msgstr "コメントフォームのメッセージと配色設定ができます。"
 
-#: _inc/jetpack-strings.php:398 _inc/lib/class.core-rest-api-endpoints.php:1055
+#: _inc/jetpack-strings.php:403 _inc/lib/class.core-rest-api-endpoints.php:1055
 #: modules/comments/admin.php:97 modules/comments/admin.php:168
 msgid "Color Scheme"
 msgstr "配色 "
@@ -8652,7 +8745,7 @@ msgstr "添付ファイル ID がありません。"
 msgid "Website"
 msgstr "ウェブサイト"
 
-#: modules/carousel/jetpack-carousel.php:204
+#: class.jetpack-debugger.php:301 modules/carousel/jetpack-carousel.php:204
 #: modules/contact-form/grunion-contact-form.php:1318
 #: modules/contact-form/grunion-form-view.php:188
 msgid "Email"
@@ -8827,12 +8920,12 @@ msgstr "追加"
 msgid "Identify words and phrases to ignore while proofreading your posts and pages:"
 msgstr "投稿や固定ページの校正時に無視する単語やフレーズを指定してください。"
 
-#: _inc/jetpack-strings.php:334
+#: _inc/jetpack-strings.php:339
 #: modules/after-the-deadline/config-unignore.php:131
 msgid "Ignored Phrases"
 msgstr "無視する語句"
 
-#: _inc/jetpack-strings.php:347 _inc/lib/class.core-rest-api-endpoints.php:1480
+#: _inc/jetpack-strings.php:352 _inc/lib/class.core-rest-api-endpoints.php:1480
 #: modules/after-the-deadline/config-options.php:93
 msgid "Use automatically detected language to proofread posts and pages"
 msgstr "投稿や固定ページの校正に自動的に検出した言語を使う"
@@ -8845,42 +8938,42 @@ msgstr "校正ツールは英語・フランス語・ドイツ語・ポルトガ
 msgid "Language"
 msgstr "言語"
 
-#: _inc/jetpack-strings.php:335 _inc/lib/class.core-rest-api-endpoints.php:1473
+#: _inc/jetpack-strings.php:340 _inc/lib/class.core-rest-api-endpoints.php:1473
 #: modules/after-the-deadline/config-options.php:81
 msgid "Redundant Phrases"
 msgstr "冗長な言い回し"
 
-#: _inc/jetpack-strings.php:336 _inc/lib/class.core-rest-api-endpoints.php:1466
+#: _inc/jetpack-strings.php:341 _inc/lib/class.core-rest-api-endpoints.php:1466
 #: modules/after-the-deadline/config-options.php:79
 msgid "Phrases to Avoid"
 msgstr "無視するフレーズ"
 
-#: _inc/jetpack-strings.php:337 _inc/lib/class.core-rest-api-endpoints.php:1459
+#: _inc/jetpack-strings.php:342 _inc/lib/class.core-rest-api-endpoints.php:1459
 #: modules/after-the-deadline/config-options.php:77
 msgid "Passive Voice"
 msgstr "受動態"
 
-#: _inc/jetpack-strings.php:338 _inc/lib/class.core-rest-api-endpoints.php:1452
+#: _inc/jetpack-strings.php:343 _inc/lib/class.core-rest-api-endpoints.php:1452
 #: modules/after-the-deadline/config-options.php:75
 msgid "Jargon"
 msgstr "特殊用語"
 
-#: _inc/jetpack-strings.php:339 _inc/lib/class.core-rest-api-endpoints.php:1445
+#: _inc/jetpack-strings.php:344 _inc/lib/class.core-rest-api-endpoints.php:1445
 #: modules/after-the-deadline/config-options.php:73
 msgid "Hidden Verbs"
 msgstr "隠れ動詞"
 
-#: _inc/jetpack-strings.php:340 _inc/lib/class.core-rest-api-endpoints.php:1438
+#: _inc/jetpack-strings.php:345 _inc/lib/class.core-rest-api-endpoints.php:1438
 #: modules/after-the-deadline/config-options.php:71
 msgid "Double Negatives"
 msgstr "二重否定"
 
-#: _inc/jetpack-strings.php:341 _inc/lib/class.core-rest-api-endpoints.php:1431
+#: _inc/jetpack-strings.php:346 _inc/lib/class.core-rest-api-endpoints.php:1431
 #: modules/after-the-deadline/config-options.php:69
 msgid "Diacritical Marks"
 msgstr "発音区別符"
 
-#: _inc/jetpack-strings.php:342 _inc/lib/class.core-rest-api-endpoints.php:1424
+#: _inc/jetpack-strings.php:347 _inc/lib/class.core-rest-api-endpoints.php:1424
 #: modules/after-the-deadline/config-options.php:67
 msgid "Complex Phrases"
 msgstr "難解な言い回し"
@@ -8889,7 +8982,7 @@ msgstr "難解な言い回し"
 msgid "Clich&eacute;s"
 msgstr "決まり文句/死語"
 
-#: _inc/jetpack-strings.php:344 _inc/lib/class.core-rest-api-endpoints.php:1410
+#: _inc/jetpack-strings.php:349 _inc/lib/class.core-rest-api-endpoints.php:1410
 #: modules/after-the-deadline/config-options.php:63
 msgid "Bias Language"
 msgstr "バイアス言語"
@@ -8898,7 +8991,7 @@ msgstr "バイアス言語"
 msgid "Enable proofreading for the following grammar and style rules when writing posts and pages:"
 msgstr "投稿や固定ページを書く際、以下の文法や文章スタイルのルールに対する校正を行う。"
 
-#: _inc/jetpack-strings.php:346
+#: _inc/jetpack-strings.php:351
 #: modules/after-the-deadline/config-options.php:58
 msgid "English Options"
 msgstr "英語設定"
@@ -8915,7 +9008,7 @@ msgstr "投稿または固定ページを最初に公開する時"
 msgid "Automatically proofread content when:"
 msgstr "以下の場合にコンテンツを自動校正する。"
 
-#: _inc/jetpack-strings.php:353
+#: _inc/jetpack-strings.php:358
 #: modules/after-the-deadline/config-options.php:48
 msgid "Proofreading"
 msgstr "校正"
@@ -9143,49 +9236,49 @@ msgstr "タイプ"
 msgid "Thumbnail Grid"
 msgstr "サムネイルグリッド"
 
-#: _inc/jetpack-strings.php:236 class.jetpack.php:6145
+#: _inc/jetpack-strings.php:236 class.jetpack.php:6150
 msgid "Connect Jetpack"
 msgstr "Jetpack と連携"
 
-#: class.jetpack.php:6141
+#: class.jetpack.php:6146
 msgid "Connecting Jetpack will show you <strong>stats</strong> about your traffic, <strong>protect</strong> you from brute force attacks, <strong>speed up</strong> your images and photos, and enable other <strong>traffic and security</strong> features."
-msgstr "Jetpack に接続すると、トラフィックについての<strong>統計情報</strong>を表示したり、ブルートフォース攻撃からサイトを<strong>保護</strong>したり、画像や写真の読み込みを<strong>スピードアップ</strong>したり、その他の<strong>トラフィックやセキュリティ</strong>関連の機能を有効化できます。"
+msgstr "Jetpack に連携すると、トラフィックについての<strong>統計情報</strong>を表示したり、ブルートフォース攻撃からサイトを<strong>保護</strong>したり、画像や写真の読み込みを<strong>スピードアップ</strong>したり、その他の<strong>トラフィックやセキュリティ</strong>関連の機能を有効化できます。"
 
 #: views/admin/my-jetpack-page.php:49
 msgid "Unlink your account from WordPress.com"
 msgstr "WordPress.com とのアカウント連携を解除"
 
-#: class.jetpack.php:6121
+#: class.jetpack.php:6126
 msgid "Akismet can help to keep your blog safe from spam!"
 msgstr "Akismet はブログへのスパムを防ぐお手伝いをします。"
 
-#: class.jetpack.php:6118
+#: class.jetpack.php:6123
 msgid "Activate Akismet"
 msgstr "Akismet を有効化"
 
-#: class.jetpack.php:6115
+#: class.jetpack.php:6120
 msgctxt "{#} Spam comments blocked by Akismet -- number is on a prior line, text is a caption."
 msgid "Spam comments blocked by Akismet."
 msgstr "Akismet がブロックしたスパムコメント。"
 
-#: class.jetpack.php:6108
+#: class.jetpack.php:6113
 msgid "Protect is inactive."
 msgstr "プロテクト機能は有効化されていません。"
 
-#: class.jetpack.php:6105
+#: class.jetpack.php:6110
 msgid "Activate Protect"
 msgstr "プロテクトを有効化"
 
-#: class.jetpack.php:6104
+#: class.jetpack.php:6109
 msgid "Protect helps to keep you secure from brute-force login attacks."
 msgstr "プロテクト機能は総当たりログイン攻撃に対してサイトを保護します。"
 
-#: class.jetpack.php:6102
+#: class.jetpack.php:6107
 msgctxt "{#} Blocked malicious login attempts -- number is on a prior line, text is a caption."
 msgid "Blocked malicious login attempts"
 msgstr "ブロックされた悪意あるログイン試行"
 
-#: class.jetpack.php:6033 class.jetpack.php:6140
+#: class.jetpack.php:6038 class.jetpack.php:6145
 msgid "Please Connect Jetpack"
 msgstr "Jetpack を連携してください。"
 
@@ -9300,23 +9393,23 @@ msgstr "一元管理機能を有効化しました。"
 msgid "You are all set! Your site can now be managed from <a href=\"%s\" target=\"_blank\">wordpress.com/sites</a>."
 msgstr "準備ができました。今後、<a href=\"%s\" target=\"_blank\">wordpress.com/sites</a> からサイトを管理できます。"
 
-#: _inc/jetpack-strings.php:309
+#: _inc/jetpack-strings.php:316
 msgid "Jetpack could not contact WordPress.com: %(error_key)s.  This usually means something is incorrectly configured on your web host."
 msgstr "Jetpack は WordPress.com と連携できませんでした:%(error_key)s。これは通常、Web ホスト上の何らかの設定が間違っていることを意味しています。"
 
-#: _inc/jetpack-strings.php:310
+#: _inc/jetpack-strings.php:317
 msgid "WordPress.com is currently having problems and is unable to fuel up your Jetpack.  Please try again later."
 msgstr "WordPress.com 側の問題により現在 Jetpack をご利用いただけません。後ほどもう一度お試しください。"
 
-#: _inc/jetpack-strings.php:311
+#: _inc/jetpack-strings.php:318
 msgid "{{s}}Your Jetpack has a glitch.{{/s}} Connecting this site with WordPress.com is not possible. This usually means your site is not publicly accessible (localhost)."
 msgstr "{{s}}Jetpack にエラーが発生しています。{{/s}}このサイトを WordPress.com に連携できません。これは通常、お使いのサイトが公開されていないことを意味しています (localhost)。"
 
-#: _inc/jetpack-strings.php:312
+#: _inc/jetpack-strings.php:319
 msgid "Your website needs to be publicly accessible to use Jetpack: %(error_key)s"
 msgstr "Jetpack を利用するには、サイトが公開されていて、アクセス制限がかかっていない必要があります:%(error_key)s"
 
-#: _inc/jetpack-strings.php:292
+#: _inc/jetpack-strings.php:299
 msgid "You have successfully disconnected Jetpack"
 msgstr "Jetpack の連携を解除しました"
 
@@ -9380,7 +9473,7 @@ msgstr "このページでは Jetpack 内で利用可能なモジュールを表
 msgid "Jetpack supercharges your self-hosted WordPress site with the awesome cloud power of WordPress.com."
 msgstr "Jetpack は、WordPress.com クラウドの力を活用してインストール型サイトをパワーアップできる WordPress プラグインです。 "
 
-#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.1)  #-#-#-#-#
+#. #-#-#-#-#  tmp-jetpack.pot (Jetpack by WordPress.com 4.4.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.jetpack.php:3272 class.jetpack.php:3285 class.jetpack.php:4156
 #: views/admin/network-admin-header.php:5
@@ -9532,10 +9625,6 @@ msgstr "テスト結果とその他のデバッグ情報をサポートチーム
 #: class.jetpack-debugger.php:302
 msgid "Use a valid email address."
 msgstr "正しいメールアドレスを使用してください。"
-
-#: class.jetpack-debugger.php:301
-msgid "E-mail"
-msgstr "メールアドレス"
 
 #: class.jetpack-debugger.php:296
 msgid "Let us know your name."
@@ -9897,47 +9986,47 @@ msgstr "Jetpack デバッグセンター"
 msgid "Configure"
 msgstr "設定"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:119
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:133
 msgid "Show:"
 msgstr "表示:"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:117
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:131
 msgid "Popular"
 msgstr "人気"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:116
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:130
 msgid "Newest"
 msgstr "最新"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:115
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:129
 msgid "Alphabetical"
 msgstr "アルファベット順"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:113
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:127
 msgid "Sort by:"
 msgstr "並び順:"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:111
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:125
 #: class.jetpack-cli.php:297
 msgid "Inactive"
 msgstr "無効"
 
-#: _inc/jetpack-strings.php:243
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:110
+#: _inc/jetpack-strings.php:242
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:124
 #: class.jetpack-cli.php:297 modules/vaultpress.php:26
 msgid "Active"
 msgstr "有効"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:109
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:123
 #: class.jetpack-modules-list-table.php:126
 msgid "All"
 msgstr "すべて"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:107
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:121
 msgid "View:"
 msgstr "表示:"
 
-#: _inc/lib/admin-pages/class.jetpack-settings-page.php:106
+#: _inc/lib/admin-pages/class.jetpack-settings-page.php:120
 #: modules/minileven/theme/pub/minileven/searchform.php:9
 #: modules/minileven/theme/pub/minileven/searchform.php:10
 #: modules/minileven/theme/pub/minileven/searchform.php:11
@@ -9994,8 +10083,8 @@ msgstr "Jetpack"
 msgid "Config"
 msgstr "設定"
 
-#: _inc/footer.php:6 _inc/jetpack-strings.php:42 _inc/jetpack-strings.php:125
-#: _inc/jetpack-strings.php:129 _inc/jetpack-strings.php:195
+#: _inc/footer.php:6 _inc/jetpack-strings.php:91 _inc/jetpack-strings.php:122
+#: _inc/jetpack-strings.php:131 _inc/jetpack-strings.php:195
 #: _inc/jetpack-strings.php:203 _inc/jetpack-strings.php:211
 #: modules/custom-content-types.php:48
 #: modules/custom-post-types/portfolios.php:132
