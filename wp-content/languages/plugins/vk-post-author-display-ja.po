@@ -1,0 +1,179 @@
+# Translation of Plugins - VK Post Author Display - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - VK Post Author Display - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-04-26 14:45:38+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - VK Post Author Display - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "https://ex-unit.nagoya/"
+msgstr "https://ex-unit.nagoya/"
+
+#. Author of the plugin/theme
+msgid "Vektor,Inc."
+msgstr "Vektor,Inc."
+
+#. Description of the plugin/theme
+msgid "Show post author information at post bottom."
+msgstr "投稿者情報を本文の下部に表示します。"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/vk-post-author-display/"
+msgstr "https://ja.wordpress.org/plugins/vk-post-author-display/"
+
+#. Plugin Name of the plugin/theme
+msgid "VK Post Author Display"
+msgstr "VK Post Author Display"
+
+#: view.admin.php:99
+msgid "* If you select the \"yes\" and already have many posts in your WordPress, you have to regenerate the thumbnail images using (for example) the \"Regenerate Thumbnails\" plugin."
+msgstr "※もし「はい」を選択した場合、過去のサムネイル画像のサイズをこのプラグインに合わせた適切なサイズでも出力するために「Regenerate Thumbnails」のようなプラグインを使って一度サムネイル画像を再生成してください。"
+
+#: view.admin.php:98
+msgid "This plugin generate the appropriate image size."
+msgstr "このプラグインに最適な画像サイズを生成します。"
+
+#: view.admin.php:97
+msgid "If thumbnail images layout has not aligned, please select the \"yes\"."
+msgstr "サムネイル画像の高さが揃わない場合は「はい」を選択してください。"
+
+#: view.admin.php:96
+msgid "If your theme already cropping thumbnail, please select the \"no\"."
+msgstr "ご利用のテーマがアイキャッチ画像をサポートしていて、アイキャッチ画像の自動トリミングを行なっている場合は「いいえ」を選択してください。"
+
+#: view.admin.php:83
+msgid "no"
+msgstr "いいえ"
+
+#: view.admin.php:82
+msgid "yes"
+msgstr "はい"
+
+#: view.admin.php:79
+msgid "Use custom size thumbnails for thumbnails display?"
+msgstr "サムネイルのカスタムサイズを使用する"
+
+#: view.admin.php:67
+msgid "display thumbnail image"
+msgstr "サムネイル画像を表示する"
+
+#: view.admin.php:65
+msgid "Display post thumbnail image"
+msgstr "記事のサムネイル画像を表示する"
+
+#: view.admin.php:60
+msgid "Author archives text"
+msgstr "著者アーカイブリンクのテキスト"
+
+#: view.admin.php:48
+msgid "display author archive link"
+msgstr "著者アーカイブのリンクを表示する"
+
+#: view.admin.php:47 view.admin.php:67
+msgid "hide"
+msgstr "表示しない"
+
+#: view.admin.php:44
+msgid "Display post author archive page link"
+msgstr "著者アーカイブページへのリンクを表示する"
+
+#: view.admin.php:39
+msgid "Post list box title"
+msgstr "最新記事一覧のタイトル"
+
+#: view.admin.php:27
+msgid "Circle"
+msgstr "円形"
+
+#: view.admin.php:26
+msgid "Square"
+msgstr "四角形"
+
+#: view.admin.php:20
+msgid "Profile Picture Style"
+msgstr "プロフィール写真の形状"
+
+#: view.admin.php:16
+msgid "Post author box title"
+msgstr "タイトル"
+
+#: view.admin-profile.php:30
+msgid "If you set the \"VK Post Author Display Profile Picture\", this image overrides the normal profile picture."
+msgstr "VK Post Author Display のプロフィール写真が設定されている場合は、標準のプロフィール写真よりも優先して表示されます。"
+
+#: view.admin-profile.php:28
+msgid "Reset image"
+msgstr "画像をリセット"
+
+#: view.admin-profile.php:25
+msgid "Choose image"
+msgstr "画像を選択"
+
+#: view.admin-profile.php:7
+msgid "Profile Picture<br>(VK Post Author Display)"
+msgstr "プロフィール写真<br>(VK Post Author Display)"
+
+#: post-author-display.php:171
+msgctxt "label in admin menu"
+msgid "VK Post Author Display"
+msgstr "VK Post Author Display"
+
+#: post-author-display.php:170
+msgid "VK Post Author Display setting"
+msgstr "VK Post Author Display 設定"
+
+#: post-author-display.php:140
+msgid "Author Archives"
+msgstr "この著者の記事一覧"
+
+#: post-author-display.php:138
+msgid "Latest entries"
+msgstr "最新の投稿"
+
+#: post-author-display.php:136
+msgid "Author Profile"
+msgstr "投稿者プロフィール"
+
+#: post-author-display.php:72
+msgid "Setting"
+msgstr "設定"
+
+#: inc/vk-admin-config.php:22
+msgid "Edit your profile"
+msgstr "プロフィールを編集"
+
+#: inc/vk-admin-config.php:21 view.admin.php:13
+msgid "Post Author Box Setting"
+msgstr "著者情報表示エリアの設定"
+
+#: inc/vk-admin-config.php:19
+msgid "VK Post Author Display Main Setting"
+msgstr "VK Post Author Display 設定"
+
+#: inc/vk-admin/class.vk-admin.php:98
+msgid "Sorry, there is no post"
+msgstr "投稿はありません"
+
+#: inc/term-color/class.term-color.php:42
+#: inc/term-color/class.term-color.php:57
+#: inc/term-color/class.term-color.php:127 inc/term-color-config.php:13
+msgid "Color"
+msgstr "色"
+
+#: hide_controller.php:41
+msgid "Don't display post author"
+msgstr "著者情報を表示しない"
+
+#: hide_controller.php:22
+msgid "Post Author Display"
+msgstr "著者情報の表示"
+
+#: admin-profile.php:22
+msgid "Caption<br>(VK Post Author Display)"
+msgstr "肩書<br>(VK Post Author Display)"

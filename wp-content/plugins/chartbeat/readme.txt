@@ -2,8 +2,8 @@
 Contributors: chartbeat
 Tags: chartbeat, analytics, amp, instant articles
 Requires at least: 2.8
-Tested up to: 4.4.2
-Stable tag: 2.0.6
+Tested up to: 4.7.2
+Stable tag: 2.0.7
 
 The Chartbeat plugin automatically adds real-time data and a top pages widget to your blog. See who’s on your site, what they’re doing - right now
 
@@ -55,37 +55,41 @@ Nope. Chartbeat code is completely asynchronous, meaning it doesn't begin to run
 
 == Changelog ==
 
-= 1.0 =
-* First version. Please provide feedback.
-
-= 1.2 =
-* stable version
-
-= 1.3 =
-* 'trackadmin' option added by Jesse S. McDougall, jesse@catalystwebworks.com
-
-= 1.4 =
-* Security enhancements from automatic *
-
-= 1.4.1 =
-* Fix widget error in logs *
-
-= 2.0 =
-* Added Dashboard Widget, Active Visits in Post Board and Embedded Console
-
-= 2.0.2 =
-* Updated handling of window load event to ensure Chartbeat is always loaded
-
-= 2.0.3 =
-* Fixed issue where the Chartbeat console's iframe was too short to be usable
-
-= 2.0.4 =
-* Remove Newsbeat reference, update json encoding
-
-= 2.0.5 =
-* Add AMP support
+= 2.0.7 =
+* Add support for engaged headline testing (http://support.chartbeat.com/edu/headlinetesting/index.html)
+* Fix widget api links
 
 = 2.0.6 =
 * Fix AMP uid bug
 * Add admin warning
 * Add Facebook Instant Article Support
+
+= 2.0.5 =
+* Add AMP support
+
+= 2.0.4 =
+* Remove Newsbeat reference, update json encoding
+
+= 2.0.3 =
+* Fixed issue where the Chartbeat console's iframe was too short to be usable
+
+= 2.0.2 =
+* Updated handling of window load event to ensure Chartbeat is always loaded
+
+= 2.0 =
+* Added Dashboard Widget, Active Visits in Post Board and Embedded Console
+
+= 1.4.1 =
+* Fix widget error in logs *
+
+= 1.4 =
+* Security enhancements from automatic *
+
+= 1.3 =
+* 'trackadmin' option added by Jesse S. McDougall, jesse@catalystwebworks.com
+
+= 1.2 =
+* stable version
+
+= 1.0 =
+* First version. Please provide feedback.
