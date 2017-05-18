@@ -4,23 +4,23 @@ Donate link: http://www.photodropper.com/
 Author URI: http://www.photodropper.com/team/
 Plugin URI: http://www.photodropper.com/wordpress-plugin/
 Tags: flickr, images, creative commons, photodropper, photo dropper, photos, post images, stock images, flikr, creative commons photos, free images, blog images, wordpress images, free stock photography, image plugin, plugin, images, image
-Requires at least: 3.1
-Tested up to: 3.6.1
-Stable tag: 2.2
+Requires at least: 4.7
+Tested up to: 4.7.2
+Stable tag: 2.3.3
 
-With PhotoDropper finding the right photo has never been easier. Get access over 253M+ free & premium photos without ever leaving WordPress.
+With PhotoDropper finding the right photo has never been easier. Access over 253M+ free & premium photos without ever leaving the WordPress Dashboard.
 
 == Description ==
 
 [youtube http://www.youtube.com/watch?v=jaCrDQHqJL8]
 
-PhotoDropper is a WordPress Plugin and it is designed to take the frustration out of finding the perfect image for your blog posts.
+PhotoDropper is a WordPress Plugin designed to take the frustration out of finding the perfect image for your blog posts.
 
-With over 243,800,000+ free images (via Creative Commons license) and 10,000,000+ premium images available at your fingertips, you'll be able to impress your readers and search engines like Google.
+With over 243,800,000+ free images (via Creative Commons license) available at your fingertips, you'll be able to impress your readers and search engines like Google.
 
-PhotoDropper let's you add great photos to your website with just 4 simple clicks.
+PhotoDropper let's you add great photos to your website with just 3 clicks.
 
-You no longer need to visit multiple different photo sites to find the right image and license. PhotoDropper does all the searching for you... it even handles the attribution.  
+You no longer need to visit multiple different photo sites to find the right image and license. PhotoDropper does all the searching for you... *it even handles the attribution*!  
 
 What's this mean to you?
 
@@ -51,18 +51,26 @@ By using this plugin you are responsible for adhering to all licensing and copyr
 
 By using this plugin you agree to the [Terms of Service](http://www.photodropper.com/tos/ "PhotoDropper Terms of Service") and [Privacy Policy](http://www.photodropper.com/privacy/ "PhotoDropper Privacy Policy") of PhotoDropper.
 
-All premium images are subject to the [Content Download Agreement](http://www.photodropper.com/cda/ "Content Download Agreement")
+All premium images are subject to the [Content Download Agreement](http://www.photodropper.com/content-download-agreement/ "Content Download Agreement")
 
 **Header image by:** [Boudewijn Berends](http://www.flickr.com/photos/boudewijnberends/4745425727/ "Mila at the beach").
 
 == Changelog ===
 
-= 2.2 =
-* More reliable saving
-* Error messages upon failed save
-* Now works for QuickPosts
-* Fixes bug where image wouldn't save if it didn't have a flickr title
-* Other misc. bug fixes
+= 2.3.3 = 
+
+* Fix some unnecessary logging
+
+= 2.3.2 =
+
+* Fix bug in photo attribution
+
+= 2.3.1 =
+
+* Complete rebuild of the plugin interface!
+* Updates to work with the latest WP Media Editor
+* Improvements to image saving reliability
+
 
 = 2.1 =
 * Featured Image Support

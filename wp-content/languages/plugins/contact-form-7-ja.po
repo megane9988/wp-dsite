@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-03-21 01:21:35+0000\n"
+"PO-Revision-Date: 2017-05-06 07:54:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,10 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: includes/rest-api.php:241
+msgid "There was an error deleting the contact form."
+msgstr "コンタクトフォームを削除する際にエラーが発生しました。"
 
 #: includes/rest-api.php:157 includes/rest-api.php:184
 #: includes/rest-api.php:233
@@ -65,9 +69,30 @@ msgstr "不正なメールボックス構文が使用されています。"
 msgid "There is a possible empty field."
 msgstr "項目が空になる可能性があります。"
 
+#: admin/includes/class-contact-forms-list-table.php:130
+msgid "%s configuration error detected"
+msgid_plural "%s configuration errors detected"
+msgstr[0] "%s件の設定エラーを検出しました"
+
 #: admin/admin.php:319
 msgid "%d configuration errors detected in this tab panel"
 msgstr "このタブパネルに %s 個の設定エラーがあります"
+
+#: admin/admin.php:318
+msgid "1 configuration error detected in this tab panel"
+msgstr "このタブパネルで1件の設定エラーを検出しました"
+
+#: admin/admin.php:317
+msgid "%d configuration errors detected"
+msgstr "%d件の設定エラーを検出しました"
+
+#: admin/admin.php:316
+msgid "1 configuration error detected"
+msgstr "1件の設定エラーを検出しました"
+
+#: admin/admin.php:495 includes/rest-api.php:118 includes/rest-api.php:194
+msgid "There was an error saving the contact form."
+msgstr "コンタクトフォームを保存する際にエラーが発生しました。"
 
 #: includes/functions.php:357
 msgid "%1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
