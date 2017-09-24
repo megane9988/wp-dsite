@@ -5,8 +5,8 @@ Author URI: http://www.photodropper.com/team/
 Plugin URI: http://www.photodropper.com/wordpress-plugin/
 Tags: flickr, images, creative commons, photodropper, photo dropper, photos, post images, stock images, flikr, creative commons photos, free images, blog images, wordpress images, free stock photography, image plugin, plugin, images, image
 Requires at least: 4.7
-Tested up to: 4.7.2
-Stable tag: 2.3.3
+Tested up to: 4.8.1
+Stable tag: 2.3.4
 
 With PhotoDropper finding the right photo has never been easier. Access over 253M+ free & premium photos without ever leaving the WordPress Dashboard.
 
@@ -56,6 +56,10 @@ All premium images are subject to the [Content Download Agreement](http://www.ph
 **Header image by:** [Boudewijn Berends](http://www.flickr.com/photos/boudewijnberends/4745425727/ "Mila at the beach").
 
 == Changelog ===
+
+= 2.3.4 =
+
+* Update that fixes introduction pointers
 
 = 2.3.3 = 
 

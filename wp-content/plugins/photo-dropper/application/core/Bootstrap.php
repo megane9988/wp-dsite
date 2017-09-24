@@ -126,7 +126,7 @@ if(!class_exists("Pdr_Bootstrap")){
             $this->pointers = array();
             if (!$PDR_UTIL->isMarked('install')) {
                 $p = new stdClass();
-                $p->el = '.wp-submenu-wrap a.wp-first-item:visible';
+                $p->el = 'tr[data-slug=\"photo-dropper\"] .plugin-description';
                 $p->content = '<h3>PhotoDropper is Installed!</h3><p>You can now access it when you edit any post or page.</p>';
                 $p->buttons = 'function( event, t ) {
                     button1 = jQuery("<a id=\"pointer-close\" style=\"margin-right:10px\" class=\"button-primary\">Try it Out!</a>");
@@ -140,10 +140,10 @@ if(!class_exists("Pdr_Bootstrap")){
                     return jQuery("<div/>").append(button2).append(button1);
                 }';
                 $p->position = '{
-                    my: "left top",
-                    at: "middle bottom",
-                    edge: "top",
-                    offset: "-40px 0"
+                    my: "middle bottom",
+                    at: "left top",
+                    edge: "bottom",
+                    offset: "0 0"
                 }';
                 $p->close = 'function(){}';
                 $p->mark = 'install';
@@ -166,8 +166,8 @@ if(!class_exists("Pdr_Bootstrap")){
                 }';
                 $p->position = '{
                     my: "left middle",
-                    at: "left middle",
-                    offset: "25px 0",
+                    at: "right middle",
+                    offset: "0 0",
                     edge: "left"
                 }';
                 $p->close = 'function(){}';
@@ -209,6 +209,7 @@ if(!class_exists("Pdr_Bootstrap")){
             if (
                 end($bits) == 'wp-admin' ||
             strstr($uri, 'wp-admin/index.php') ||
+            strstr($uri, 'wp-admin/plugins.php') ||
             strstr($uri, 'wp-admin/post-new.php') ||
             strstr($uri, 'wp-admin/post.php')
             ) {
@@ -227,6 +228,7 @@ if(!class_exists("Pdr_Bootstrap")){
                 "USEREMAIL" => $current_user->user_email,
                 "USERFNAME" => get_user_meta($current_user->ID, 'first_name'),
                 "USERLNAME" => get_user_meta($current_user->ID, 'last_name'),
+                "STORE" => json_decode(get_user_meta($current_user->ID, 'pdrp_store', true)),
                 "ADDCARD" => PDR_URL . '/application/core/SecureRedirect.php',
                 ));
             }

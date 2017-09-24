@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Amazon JS - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-12-07 02:45:28+0000\n"
+"PO-Revision-Date: 2017-05-23 23:07:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/2.3.0-alpha\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Amazon JS - Development (trunk)\n"
 
@@ -377,7 +377,7 @@ msgstr "おもちゃ"
 
 #: amazonjs-aws-params.php:569
 msgid "Tools"
-msgstr "道具"
+msgstr "ツール"
 
 #: amazonjs-aws-params.php:557
 msgid "SportingGoods"
@@ -389,7 +389,7 @@ msgstr "TVゲーム"
 
 #: amazonjs-aws-params.php:533
 msgid "Software"
-msgstr "PCソフト"
+msgstr "ソフトウェア"
 
 #: amazonjs-aws-params.php:521
 msgid "Shoes"

@@ -3,7 +3,7 @@
 Plugin Name: PhotoDropper
 Plugin URI: http://photodropper.com
 Description: Find the perfect blog photo without ever leaving WordPress. Now with access to over 211M+ photos it is easy to find the right photo with PhotoDropper.
-Version: 2.3.3
+Version: 2.3.4
 Author: PhotoDropper, LLC
 Author URI: http://photodropper.com/team/
 */
