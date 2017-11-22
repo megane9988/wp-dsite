@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Jetpack by WordPress.com - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-09-05 15:20:16+0000\n"
+"PO-Revision-Date: 2017-09-29 01:42:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -266,6 +266,10 @@ msgstr "リクエストされたデータを取得できません。"
 #: _inc/lib/core-api/class.jetpack-core-api-module-endpoints.php:1340
 msgid "Could not connect to VaultPress."
 msgstr "VaultPress に接続できませんでした。"
+
+#: _inc/jetpack-strings.php:575
+msgid "Contact Form screen shot"
+msgstr "お問い合わせフォームのスクリーンショット"
 
 #: _inc/jetpack-strings.php:574
 msgid "To use it, just open up a post or page to the visual editor. From there, you'll find a button inside the toolbar with an icon that looks a bit like the contact form. It is usually furthest to the right. Then just click the button and, voila, a contact form has been created!"
@@ -924,7 +928,7 @@ msgstr "ストリーム"
 
 #: modules/masterbar/masterbar.php:221
 msgid "Reader"
-msgstr "読者"
+msgstr "購読ブログ"
 
 #. translators: Last item in a list of reasons to contact Jetpack support.
 #: class.jetpack-debugger.php:372
