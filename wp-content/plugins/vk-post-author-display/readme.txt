@@ -1,10 +1,10 @@
 === VK Post Author Display ===
-Contributors: kurudrive,dswebstudio,mypacecreator,gatespace
+Contributors: kurudrive,dswebstudio,mypacecreator,gatespace,hnle,catherine8007
 Donate link:
 Tags: post,author
 Requires at least: 4.4
-Tested up to: 4.7.3
-Stable tag: 1.4.3
+Tested up to: 4.9.1
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
