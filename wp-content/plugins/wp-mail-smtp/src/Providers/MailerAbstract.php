@@ -329,7 +329,7 @@ abstract class MailerAbstract implements MailerInterface {
 	}
 
 	/**
-	 * This method is relevant to SMTP, Pepipost and Mail.
+	 * This method is relevant to SMTP and Pepipost.
 	 * All other custom mailers should override it with own information.
 	 *
 	 * @since 1.2.0
@@ -343,7 +343,7 @@ abstract class MailerAbstract implements MailerInterface {
 
 		// Mail mailer has nothing to return.
 		if ( $this->options->is_mailer_smtp() ) {
-			$smtp_text[] = '<strong>ErrorInfo:</strong> ' . make_clickable( $phpmailer->ErrorInfo );
+			$smtp_text[] = '<strong>ErrorInfo:</strong> ' . make_clickable( wp_strip_all_tags( $phpmailer->ErrorInfo ) );
 			$smtp_text[] = '<strong>Host:</strong> ' . $phpmailer->Host;
 			$smtp_text[] = '<strong>Port:</strong> ' . $phpmailer->Port;
 			$smtp_text[] = '<strong>SMTPSecure:</strong> ' . Debug::pvar( $phpmailer->SMTPSecure );
@@ -359,6 +359,12 @@ abstract class MailerAbstract implements MailerInterface {
 		if ( function_exists( 'apache_get_modules' ) ) {
 			$modules     = apache_get_modules();
 			$smtp_text[] = '<strong>Apache.mod_security:</strong> ' . ( in_array( 'mod_security', $modules, true ) || in_array( 'mod_security2', $modules, true ) ? 'Yes' : 'No' );
+		}
+		if ( function_exists( 'selinux_is_enabled' ) ) {
+			$smtp_text[] = '<strong>OS.SELinux:</strong> ' . ( selinux_is_enabled() ? 'Yes' : 'No' );
+		}
+		if ( function_exists( 'grsecurity_is_enabled' ) ) {
+			$smtp_text[] = '<strong>OS.grsecurity:</strong> ' . ( grsecurity_is_enabled() ? 'Yes' : 'No' );
 		}
 
 		return implode( '<br>', $smtp_text );
