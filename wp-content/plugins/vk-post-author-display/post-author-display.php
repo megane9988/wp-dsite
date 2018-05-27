@@ -3,7 +3,7 @@
 Plugin Name: VK Post Author Display
 Plugin URI: http://wordpress.org/extend/plugins/vk-post-author-display/
 Description: Show post author information at post bottom.
-Version: 1.5.2
+Version: 1.6.0
 Author: Vektor,Inc.
 Author URI: https://ex-unit.nagoya/
 Text Domain: vk-post-author-display
@@ -58,10 +58,10 @@ define( 'VK_PAD_DIR', plugin_dir_path( __FILE__ ) );
 /*-------------------------------------------*/
 /*	vk post author text domain load
 /*-------------------------------------------*/
-function pad_text_domain() {
-	load_plugin_textdomain( 'vk-post-author-display', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-}
-add_action( 'init', 'pad_text_domain' );
+// function pad_text_domain() {
+// 	load_plugin_textdomain( 'vk-post-author-display', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+// }
+// add_action( 'init', 'pad_text_domain' );
 
 require_once( VK_PAD_DIR . 'inc/term-color-config.php' );
 require_once( VK_PAD_DIR . 'inc/vk-admin-config.php' );

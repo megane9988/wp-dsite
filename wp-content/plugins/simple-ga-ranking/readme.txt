@@ -1,9 +1,9 @@
 === Simple GA Ranking  ===
-Contributors: horike,amimotoami
+Contributors: horike,amimotoami,webnist,wokamoto,gatespace,mt8biz
 Tags:  form, ranking, popular, google analytics
 Requires at least: 3.6.1
-Tested up to: 4.6.1
-Stable tag: 2.0.9
+Tested up to: 4.9.5
+Stable tag: 2.0.10
 
 Ranking plugin using data from google analytics.
 
@@ -87,3 +87,5 @@ Please contact to me.
 * Fixed some error handling
 = 2.0.9 =
 * fixed error that didn't dispaly your ranking on v2.0.8
+= 2.0.10 =
+* Abolished `create_function` for support PHP7.2
