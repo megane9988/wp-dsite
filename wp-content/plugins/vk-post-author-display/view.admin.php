@@ -4,9 +4,7 @@ function pad_the_admin_body(){ ?>
 <form method="post" action="options.php">
 <?php
 	settings_fields( 'pad_plugin_options' );
-	$options_pad     = pad_get_plugin_options();
-	$default_options = pad_get_default_options();
-
+	$options_pad = pad_get_plugin_options();
 ?>
 <div>
 <section>
@@ -14,7 +12,7 @@ function pad_the_admin_body(){ ?>
 <table class="form-table">
 <tr>
 <th><?php _e( 'Post author box title', 'vk-post-author-display' ); ?></th>
-<td><?php echo get_pad_options( 'author_box_title' ); ?> -> <input type="text" name="pad_plugin_options[author_box_title]" id="author_box_title" value="<?php echo esc_attr( $options_pad['author_box_title'] ); ?>" style="width:50%;" /></td>
+<td><?php echo wp_kses_post( $options_pad['author_box_title'] ); ?> -> <input type="text" name="pad_plugin_options[author_box_title]" id="author_box_title" value="<?php echo esc_attr( $options_pad['author_box_title'] ); ?>" style="width:50%;" /></td>
 </tr>
 <tr>
 <th><?php _e( 'Profile Picture Style', 'vk-post-author-display' ); ?></th>
@@ -44,7 +42,7 @@ endif;
 </tr>
 <tr>
 <th><?php _e( 'Post list box title', 'vk-post-author-display' ); ?></th>
-<td><?php echo get_pad_options( 'list_box_title' ); ?> -> <input type="text" name="pad_plugin_options[list_box_title]" id="list_box_title" value="<?php echo esc_attr( $options_pad['list_box_title'] ); ?>" style="width:50%;" /></td>
+<td><?php echo wp_kses_post( $options_pad['list_box_title'] ); ?> -> <input type="text" name="pad_plugin_options[list_box_title]" id="list_box_title" value="<?php echo esc_attr( $options_pad['list_box_title'] ); ?>" style="width:50%;" /></td>
 </tr>
 
 <tr>
@@ -71,7 +69,7 @@ endif;
 </tr>
 <tr>
 <th><?php _e( 'Author archives text', 'vk-post-author-display' ); ?></th>
-<td><?php echo get_pad_options( 'author_archive_link_txt' ); ?> -> <input type="text" name="pad_plugin_options[author_archive_link_txt]" id="author_archive_link_txt" value="<?php echo esc_attr( $options_pad['author_archive_link_txt'] ); ?>" style="width:50%;" /></td>
+<td><?php echo wp_kses_post( $options_pad['author_archive_link_txt'] ); ?> -> <input type="text" name="pad_plugin_options[author_archive_link_txt]" id="author_archive_link_txt" value="<?php echo esc_attr( $options_pad['author_archive_link_txt'] ); ?>" style="width:50%;" /></td>
 </tr>
 
 <tr>
@@ -126,6 +124,42 @@ endif;
 		<?php _e( 'If thumbnail images layout has not aligned, please select the "yes".', 'vk-post-author-display' ); ?>
 		<?php _e( 'This plugin generate the appropriate image size.', 'vk-post-author-display' ); ?></br>
 		<?php _e( '* If you select the "yes" and already have many posts in your WordPress, you have to regenerate the thumbnail images using (for example) the "Regenerate Thumbnails" plugin.', 'vk-post-author-display' ); ?></p>
+	</td>
+</tr>
+
+<tr>
+	<th><?php _e( 'Auto display', 'vk-post-author-display' ); ?></th>
+	<td>
+		<?php
+		$auto_displays = array(
+			__( 'yes', 'vk-post-author-display' ) => 'yes',
+			__( 'no', 'vk-post-author-display' )  => 'no',
+		);
+		foreach ( $auto_displays as $auto_display_label => $auto_display_value ) {
+
+			$checked = '';
+			if ( $options_pad['auto_display'] == $auto_display_value ) {
+					$checked = ' checked';
+			}
+			?>
+			<label class="form_horizontal_item">
+				<input type="radio" name="pad_plugin_options[auto_display]" value="<?php echo $auto_display_value; ?>"<?php echo $checked; ?>/>
+				<?php echo $auto_display_label; ?>
+			</label>
+			<?php
+
+		}
+		?>
+		<br />
+		<p>
+		<?php _e( 'If you wantt to control of display position, please select the "no" and write this code to the template file', 'vk-post-author-display' ); ?></p>
+
+		<pre>
+if ( class_exists( 'Vk_Post_Author_Box' ) ) {
+	echo Vk_Post_Author_Box::pad_get_author_box();
+}
+		</pre>
+
 	</td>
 </tr>
 

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - VK Post Author Display - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-04-16 04:11:38+0000\n"
+"PO-Revision-Date: 2019-01-02 14:03:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,95 +11,125 @@ msgstr ""
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - VK Post Author Display - Stable (latest release)\n"
 
-#: inc/vk-admin/class-vk-admin.php:316
+#: view.admin.php:131
+msgid "Auto display"
+msgstr "自動表示"
+
+#: view.admin.php:155
+msgid "If you wantt to control of display position, please select the \"no\" and write this code to the template file"
+msgstr "表示位置を制御したい場合は、「いいえ」を選択して以下のコードをテンプレートファイルに書き込んでください。"
+
+#: inc/font-awesome/class-vk-font-awesome-versions.php:69
+#: inc/font-awesome/class-vk-font-awesome-versions.php:71
+msgid "Ex ) "
+msgstr "例 ) "
+
+#: inc/font-awesome/class-vk-font-awesome-versions.php:193
+msgid "4.7 will be abolished in the near future."
+msgstr "4.7 は将来廃止されます。"
+
+#: inc/font-awesome/class-vk-font-awesome-versions.php:22
+#: inc/font-awesome/class-vk-font-awesome-versions.php:37
+msgid "Not recommended"
+msgstr "非推奨"
+
+#: inc/font-awesome/class-vk-font-awesome-versions.php:169
+msgid "Font Awesome"
+msgstr "Font Awesome"
+
+#: inc/font-awesome/class-vk-font-awesome-versions.php:190
+msgid "Font Awesome Version"
+msgstr "Font Awesome バージョン"
+
+#: inc/vk-admin/class-vk-admin.php:331
 msgid "Vektor WordPress Information"
 msgstr "Vektor WordPress Information"
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
 msgid "https://ex-unit.nagoya/"
 msgstr "https://ex-unit.nagoya/"
 
-#. Author of the plugin/theme
+#. Author of the plugin
 msgid "Vektor,Inc."
 msgstr "Vektor,Inc."
 
-#. Description of the plugin/theme
+#. Description of the plugin
 msgid "Show post author information at post bottom."
 msgstr "投稿者情報を本文の下部に表示します。"
 
-#. Plugin Name of the plugin/theme
+#. Plugin Name of the plugin
 msgid "VK Post Author Display"
 msgstr "VK Post Author Display"
 
-#: view.admin.php:128
+#: view.admin.php:126
 msgid "* If you select the \"yes\" and already have many posts in your WordPress, you have to regenerate the thumbnail images using (for example) the \"Regenerate Thumbnails\" plugin."
 msgstr "※もし「はい」を選択した場合、過去のサムネイル画像のサイズをこのプラグインに合わせた適切なサイズでも出力するために「Regenerate Thumbnails」のようなプラグインを使って一度サムネイル画像を再生成してください。"
 
-#: view.admin.php:127
+#: view.admin.php:125
 msgid "This plugin generate the appropriate image size."
 msgstr "このプラグインに最適な画像サイズを生成します。"
 
-#: view.admin.php:126
+#: view.admin.php:124
 msgid "If thumbnail images layout has not aligned, please select the \"yes\"."
 msgstr "サムネイル画像の高さが揃わない場合は「はい」を選択してください。"
 
-#: view.admin.php:125
+#: view.admin.php:123
 msgid "If your theme already cropping thumbnail, please select the \"no\"."
 msgstr "ご利用のテーマがアイキャッチ画像をサポートしていて、アイキャッチ画像の自動トリミングを行なっている場合は「いいえ」を選択してください。"
 
-#: view.admin.php:106
+#: view.admin.php:104 view.admin.php:136
 msgid "no"
 msgstr "いいえ"
 
-#: view.admin.php:105
+#: view.admin.php:103 view.admin.php:135
 msgid "yes"
 msgstr "はい"
 
-#: view.admin.php:101
+#: view.admin.php:99
 msgid "Use custom size thumbnails for thumbnails display?"
 msgstr "サムネイルのカスタムサイズを使用する"
 
-#: view.admin.php:83
+#: view.admin.php:81
 msgid "display thumbnail image"
 msgstr "サムネイル画像を表示する"
 
-#: view.admin.php:78
+#: view.admin.php:76
 msgid "Display post thumbnail image"
 msgstr "記事のサムネイル画像を表示する"
 
-#: view.admin.php:73
+#: view.admin.php:71
 msgid "Author archives text"
 msgstr "著者アーカイブリンクのテキスト"
 
-#: view.admin.php:56
+#: view.admin.php:54
 msgid "display author archive link"
 msgstr "著者アーカイブのリンクを表示する"
 
-#: view.admin.php:55 view.admin.php:82
+#: view.admin.php:53 view.admin.php:80
 msgid "hide"
 msgstr "表示しない"
 
-#: view.admin.php:51
+#: view.admin.php:49
 msgid "Display post author archive page link"
 msgstr "著者アーカイブページへのリンクを表示する"
 
-#: view.admin.php:46
+#: view.admin.php:44
 msgid "Post list box title"
 msgstr "最新記事一覧のタイトル"
 
-#: view.admin.php:29
+#: view.admin.php:27
 msgid "Circle"
 msgstr "円形"
 
-#: view.admin.php:28
+#: view.admin.php:26
 msgid "Square"
 msgstr "四角形"
 
-#: view.admin.php:20
+#: view.admin.php:18
 msgid "Profile Picture Style"
 msgstr "プロフィール写真の形状"
 
-#: view.admin.php:16
+#: view.admin.php:14
 msgid "Post author box title"
 msgstr "タイトル"
 
@@ -119,28 +149,28 @@ msgstr "画像を選択"
 msgid "Profile Picture<br>(VK Post Author Display)"
 msgstr "プロフィール写真<br>(VK Post Author Display)"
 
-#: post-author-display.php:177
+#: post-author-display.php:205
 msgctxt "label in admin menu"
 msgid "VK Post Author Display"
 msgstr "VK Post Author Display"
 
-#: post-author-display.php:176
+#: post-author-display.php:204
 msgid "VK Post Author Display setting"
 msgstr "VK Post Author Display 設定"
 
-#: post-author-display.php:145
+#: post-author-display.php:156
 msgid "Author Archives"
 msgstr "この著者の記事一覧"
 
-#: post-author-display.php:143
+#: post-author-display.php:154
 msgid "Latest entries"
 msgstr "最新の投稿"
 
-#: post-author-display.php:141
+#: post-author-display.php:152
 msgid "Author Profile"
 msgstr "投稿者プロフィール"
 
-#: post-author-display.php:77
+#: post-author-display.php:78
 msgid "Setting"
 msgstr "設定"
 
@@ -148,7 +178,7 @@ msgstr "設定"
 msgid "Edit your profile"
 msgstr "プロフィールを編集"
 
-#: inc/vk-admin-config.php:21 view.admin.php:13
+#: inc/vk-admin-config.php:21 view.admin.php:11
 msgid "Post Author Box Setting"
 msgstr "著者情報表示エリアの設定"
 
@@ -156,13 +186,13 @@ msgstr "著者情報表示エリアの設定"
 msgid "VK Post Author Display Main Setting"
 msgstr "VK Post Author Display 設定"
 
-#: inc/vk-admin/class-vk-admin.php:262
+#: inc/vk-admin/class-vk-admin.php:277
 msgid "Sorry, there is no post"
 msgstr "投稿はありません"
 
-#: inc/term-color/class.term-color.php:42
-#: inc/term-color/class.term-color.php:57
-#: inc/term-color/class.term-color.php:132
+#: inc/term-color/class.term-color.php:41
+#: inc/term-color/class.term-color.php:56
+#: inc/term-color/class.term-color.php:130
 msgid "Color"
 msgstr "色"
 
@@ -178,6 +208,6 @@ msgstr "著者情報の表示"
 msgid "Caption<br>(VK Post Author Display)"
 msgstr "肩書<br>(VK Post Author Display)"
 
-#. Plugin URI of the plugin/theme
+#. Plugin URI of the plugin
 msgid "http://wordpress.org/extend/plugins/vk-post-author-display/"
 msgstr "https://ja.wordpress.org/plugins/vk-post-author-display/"

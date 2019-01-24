@@ -3,7 +3,7 @@
 Plugin Name: VK Post Author Display
 Plugin URI: http://wordpress.org/extend/plugins/vk-post-author-display/
 Description: Show post author information at post bottom.
-Version: 1.6.0
+Version: 1.8.2
 Author: Vektor,Inc.
 Author URI: https://ex-unit.nagoya/
 Text Domain: vk-post-author-display
@@ -65,6 +65,7 @@ define( 'VK_PAD_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once( VK_PAD_DIR . 'inc/term-color-config.php' );
 require_once( VK_PAD_DIR . 'inc/vk-admin-config.php' );
+require_once( VK_PAD_DIR . 'inc/font-awesome-config.php' );
 require_once( VK_PAD_DIR . 'view.post-author.php' );
 require_once( VK_PAD_DIR . 'admin-profile.php' );
 require_once( VK_PAD_DIR . 'hide_controller.php' );
@@ -101,6 +102,14 @@ function pad_display_post_types() {
 /*-------------------------------------------*/
 add_filter( 'the_content', 'pad_add_author' );
 function pad_add_author( $content ) {
+
+	$option = pad_get_plugin_options();
+
+	// 非表示指定されてたら表示しない
+	if ( $option['auto_display'] == 'no' ) {
+		return $content;
+	}
+
 	$post_types = pad_display_post_types();
 	// if ( ( is_single() || is_page() ) && !is_front_page() ){
 	if ( is_singular( $post_types ) ) {
@@ -120,6 +129,8 @@ function pad_add_author( $content ) {
 	}
 	return $content;
 }
+
+
 /*-------------------------------------------*/
 /*	front display css
 /*-------------------------------------------*/
@@ -129,7 +140,7 @@ function pad_set_css() {
 	$cssPath    = apply_filters( 'pad-stylesheet', plugins_url( 'css/vk-post-author.css', __FILE__ ) );
 	if ( is_singular( $post_types ) ) {
 		wp_enqueue_style( 'set_vk_post_autor_css', $cssPath, false, VK_PAD_VERSION );
-		wp_enqueue_style( 'font-awesome', VK_PAD_URL . 'libraries/font-awesome/css/font-awesome.min.css', array(), '4.6.3', 'all' );
+		// wp_enqueue_style( 'font-awesome', VK_PAD_URL . 'libraries/font-awesome/css/font-awesome.min.css', array(), '4.6.3', 'all' );
 	}
 }
 
@@ -145,6 +156,7 @@ function pad_get_default_options() {
 		'author_archive_link_txt' => __( 'Author Archives', 'vk-post-author-display' ),
 		'show_thumbnail'          => 'display',
 		'generate_thumbnail'      => 'yes',
+		'auto_display'            => 'yes',
 	);
 	return apply_filters( 'pad_default_options', $display_author_options );
 }
@@ -165,7 +177,23 @@ add_action( 'admin_init', 'pad_plugin_options_Custom_init' );
 /*	functionsで毎回呼び出して$options_padに入れる処理を他でする。
 /*-------------------------------------------*/
 function pad_get_plugin_options() {
-	return get_option( 'pad_plugin_options', pad_get_default_options() );
+	// デフォルト値を取得
+	$default = pad_get_default_options();
+
+	// オプション値を取得（無い場合はデフォルト値を入れて設定）
+	$options = get_option( 'pad_plugin_options', $default );
+
+	// なぜか配列で値が入ってしまってる場合があるので...
+	foreach ( $options as $key => $value ) {
+		// 配列ではいっちゃってる場合はデフォルトで上書き
+		if ( is_array( $value ) ) {
+			$options[ $key ] = $default[ $key ];
+		}
+	}
+	// 後で追加された値などオプション値がちゃんと入ってない場合があるので値を再結合
+	$options = wp_parse_args( $options, $default );
+
+	return $options;
 }
 
 /*-------------------------------------------*/
@@ -199,13 +227,14 @@ add_action( 'admin_menu', 'pad_add_customSetting' );
 function pad_plugin_options_validate( $input ) {
 	$output = $defaults = pad_get_default_options();
 
-	$output['author_box_title']        = $input['author_box_title'];
-	$output['author_picture_style']    = $input['author_picture_style'];
-	$output['list_box_title']          = $input['list_box_title'];
-	$output['author_archive_link']     = $input['author_archive_link'];
-	$output['author_archive_link_txt'] = $input['author_archive_link_txt'];
-	$output['show_thumbnail']          = $input['show_thumbnail'];
-	$output['generate_thumbnail']      = $input['generate_thumbnail'];
+	$output['author_box_title']        = wp_kses_post( $input['author_box_title'] );
+	$output['author_picture_style']    = esc_html( $input['author_picture_style'] );
+	$output['list_box_title']          = wp_kses_post( [ 'list_box_title' ] );
+	$output['author_archive_link']     = esc_html( $input['author_archive_link'] );
+	$output['author_archive_link_txt'] = wp_kses_post( [ 'author_archive_link_txt' ] );
+	$output['show_thumbnail']          = esc_html( $input['show_thumbnail'] );
+	$output['generate_thumbnail']      = esc_html( $input['generate_thumbnail'] );
+	$output['auto_display']            = esc_html( $input['auto_display'] );
 
 	return apply_filters( 'pad_plugin_options_validate', $output, $input, $defaults );
 }
