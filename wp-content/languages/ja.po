@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.0.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-11 07:02:00+0000\n"
+"PO-Revision-Date: 2019-01-25 06:47:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -5462,7 +5462,7 @@ msgstr "投稿のない、このコメントをする権限がありません。
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:429
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:438
 msgid "Sorry, you are not allowed to edit '%s' for comments."
-msgstr "コメントのステータスを設定する権限がありません。"
+msgstr "コメントの '%s' を設定する権限がありません。"
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:122
 #: wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php:358
