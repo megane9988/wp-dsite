@@ -69,7 +69,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * それぞれにユニーク (一意) な接頭辞を与えることで一つのデータベースに複数の WordPress を
  * インストールすることができます。半角英数字と下線のみを使用してください。
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * 開発者へ: WordPress デバッグモード
@@ -83,7 +83,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
-/* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
+/* 編集が必要なのはここまでです ! WordPress でのパブリッシングをお楽しみください。 */
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )

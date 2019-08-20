@@ -164,8 +164,8 @@ msgctxt "Libre Franklin font: on or off"
 msgid "on"
 msgstr "off"
 
-#: functions.php:64 functions.php:203
-#: template-parts/navigation/navigation-top.php:12
+#: template-parts/navigation/navigation-top.php:12 functions.php:64
+#: functions.php:203
 msgid "Top Menu"
 msgstr "トップメニュー"
 
@@ -185,7 +185,7 @@ msgstr "検索キーワードに一致するものが見つかりませんでし
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "最初の投稿を公開する準備はできましたか ? <a href=\"%1$s\">ここから始めましょう</a>。"
 
-#: search.php:21 template-parts/post/content-none.php:17
+#: template-parts/post/content-none.php:17 search.php:21
 msgid "Nothing Found"
 msgstr "何も見つかりませんでした"
 
@@ -217,12 +217,12 @@ msgid "Search for:"
 msgstr "検索:"
 
 #. translators: %s: Name of current post
-#: functions.php:390 template-parts/post/content-gallery.php:71
-#: template-parts/post/content.php:57 template-parts/post/content-image.php:61
-#: template-parts/post/content-audio.php:84
-#: template-parts/post/content-video.php:83
-#: template-parts/page/content-front-page.php:42
 #: template-parts/page/content-front-page-panels.php:45
+#: template-parts/page/content-front-page.php:42
+#: template-parts/post/content-audio.php:84 template-parts/post/content.php:57
+#: template-parts/post/content-gallery.php:71
+#: template-parts/post/content-video.php:83
+#: template-parts/post/content-image.php:61 functions.php:390
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">\"%s\" の</span>続きを読む"
 
@@ -234,11 +234,11 @@ msgstr "ダーク"
 msgid "Twenty Seventeen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
 msgstr "Twenty Seventeen には WordPress 4.7以降のバージョンが必要です。現在ご利用中のバージョンは%sです。アップグレードしてもう一度お試しください。"
 
-#: template-parts/post/content-gallery.php:78
-#: template-parts/post/content.php:64 template-parts/post/content-image.php:68
-#: template-parts/post/content-audio.php:91
-#: template-parts/post/content-video.php:90
 #: template-parts/page/content-page.php:26
+#: template-parts/post/content-audio.php:91 template-parts/post/content.php:64
+#: template-parts/post/content-gallery.php:78
+#: template-parts/post/content-video.php:90
+#: template-parts/post/content-image.php:68
 msgid "Pages:"
 msgstr "ページ:"
 
@@ -246,7 +246,7 @@ msgstr "ページ:"
 msgid "Menu"
 msgstr "メニュー"
 
-#: header.php:27
+#: header.php:28
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
@@ -274,7 +274,7 @@ msgstr "フッターソーシャルリンクメニュー"
 msgid "Comments are closed."
 msgstr "コメントは受け付けていません。"
 
-#: index.php:54 archive.php:50 search.php:47
+#: archive.php:50 search.php:47 index.php:54
 msgid "Page"
 msgstr "ページ"
 
@@ -286,11 +286,11 @@ msgstr "お探しのページが見つかりません。"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "こちらには何もありません。検索をお試しください。"
 
-#: index.php:52 archive.php:48 search.php:45
+#: archive.php:48 search.php:45 index.php:52
 msgid "Previous page"
 msgstr "前のページ"
 
-#: index.php:53 archive.php:49 search.php:46
+#: archive.php:49 search.php:46 index.php:53
 msgid "Next page"
 msgstr "次のページ"
 
