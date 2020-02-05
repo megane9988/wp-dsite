@@ -1,7 +1,7 @@
 <?php
 
-/*-------------------------------------------*/
-/*	Add user sns link
+/*
+  Add user sns link
 /*-------------------------------------------*/
 
 function pad_sns_array() {
@@ -27,7 +27,7 @@ function pad_sns_array() {
 			'icon_fa5' => 'fab fa-instagram',
 		),
 		'youtube'   => array(
-			'name'     => 'You Tube',
+			'name'     => 'YouTube',
 			'icon_fa4' => 'fa fa-youtube-square',
 			'icon_fa5' => 'fab fa-youtube-square',
 		),
@@ -41,13 +41,18 @@ function pad_sns_array() {
 			'icon_fa4' => 'fa fa-wordpress',
 			'icon_fa5' => 'fab fa-wordpress',
 		),
+		'amazon'    => array(
+			'name'     => __( 'amazon Wish List', 'vk-post-author-display' ),
+			'icon_fa4' => 'fa fa-amazon',
+			'icon_fa5' => 'fab fa-amazon',
+		),
 	);
 	return $sns_array;
 }
 
 function pad_update_profile_fields( $contactmethods ) {
 
-	//項目の追加
+	// 項目の追加
 	$contactmethods['pad_caption'] = __( 'Caption<br>(VK Post Author Display)', 'vk-post-author-display' );
 
 	$sns_array = pad_sns_array();
@@ -59,10 +64,10 @@ function pad_update_profile_fields( $contactmethods ) {
 }
 add_filter( 'user_contactmethods', 'pad_update_profile_fields', 10, 1 );
 
+/*
+  vk post author profile image
 /*-------------------------------------------*/
-/*	vk post author profile image
-/*-------------------------------------------*/
-require_once( VK_PAD_DIR . 'view.admin-profile.php' );
+require_once VK_PAD_DIR . 'view.admin-profile.php';
 add_action( 'show_password_fields', 'add_user_profile_image_form' );
 
 function pad_update_user_profile_image( $user_id, $old_user_data ) {
@@ -75,17 +80,17 @@ function pad_update_user_profile_image( $user_id, $old_user_data ) {
 }
 add_action( 'profile_update', 'pad_update_user_profile_image', 10, 2 );
 
-/*-------------------------------------------*/
-/*	$admin_pages の配列にいれる識別値は下記をコメントアウト解除すればブラウザのコンソールで確認出来る
+/*
+  $admin_pages の配列にいれる識別値は下記をコメントアウト解除すればブラウザのコンソールで確認出来る
 /*-------------------------------------------*/
 
 // add_action("admin_head", 'suffix2console');
 // function suffix2console() {
-// 		global $hook_suffix;
-// 		if (is_user_logged_in()) {
-// 				$str = "<script type=\"text/javascript\">console.log('%s')</script>";
-// 				printf($str, $hook_suffix);
-// 		}
+// global $hook_suffix;
+// if (is_user_logged_in()) {
+// $str = "<script type=\"text/javascript\">console.log('%s')</script>";
+// printf($str, $hook_suffix);
+// }
 // }
 
 function pad_admin_enqueue_scripts() {
