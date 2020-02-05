@@ -2,10 +2,10 @@
 /*
 Plugin Name: WP Multibyte Patch
 Description: Multibyte functionality enhancement for the WordPress Japanese package.
-Version: 2.8.2
-Plugin URI: http://eastcoder.com/code/wp-multibyte-patch/
+Version: 2.8.3
+Plugin URI: https://eastcoder.com/code/wp-multibyte-patch/
 Author: Seisuke Kuraishi
-Author URI: http://tinybit.co.jp/
+Author URI: https://tinybit.co.jp/
 License: GPLv2
 Text Domain: wp-multibyte-patch
 Domain Path: /languages
@@ -15,11 +15,11 @@ Domain Path: /languages
  * Multibyte functionality enhancement for the WordPress Japanese package.
  *
  * @package WP_Multibyte_Patch
- * @version 2.8.2
+ * @version 2.8.3
  * @author Seisuke Kuraishi <210pura@gmail.com>
- * @copyright Copyright (c) 2018 Seisuke Kuraishi, Tinybit Inc.
- * @license http://opensource.org/licenses/gpl-2.0.php GPLv2
- * @link http://eastcoder.com/code/wp-multibyte-patch/
+ * @copyright Copyright (c) 2019 Seisuke Kuraishi, Tinybit Inc.
+ * @license https://opensource.org/licenses/gpl-2.0.php GPLv2
+ * @link https://eastcoder.com/code/wp-multibyte-patch/
  */
 
 /**
@@ -107,8 +107,9 @@ class multibyte_patch {
 
 		$from_encoding = isset( $_POST['charset'] ) ? $_POST['charset'] : '';
 
-		if ( !$from_encoding )
-			$from_encoding = ( preg_match( "/^.*charset=([a-zA-Z0-9\-_]+).*$/i", $_SERVER['CONTENT_TYPE'], $matched ) ) ? $matched[1] : '';
+		if ( empty( $from_encoding ) && preg_match( "/^.*charset=([a-zA-Z0-9\-_]+).*$/i", $_SERVER['CONTENT_TYPE'], $matched ) ) {
+			$from_encoding = isset( $matched[1] ) ? $matched[1] : '';
+		}
 
 		$from_encoding = str_replace( array( ',', ' ' ), '', strtoupper( trim( $from_encoding ) ) );
 		$from_encoding = $this->guess_encoding( $excerpt . $title . $blog_name, $from_encoding );
@@ -166,7 +167,7 @@ class multibyte_patch {
 				break;
 		}
 
-		if ( !$context )
+		if ( empty( $context ) )
 			return $commentdata;
 
 		$context[1] = strip_tags( $context[1] );

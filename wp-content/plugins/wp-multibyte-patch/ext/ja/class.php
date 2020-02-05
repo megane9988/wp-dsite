@@ -3,11 +3,11 @@
  * WP Multibyte Patch Japanese Locale Extension
  *
  * @package WP_Multibyte_Patch
- * @version 2.8.2
+ * @version 2.8.3
  * @author Seisuke Kuraishi <210pura@gmail.com>
- * @copyright Copyright (c) 2018 Seisuke Kuraishi, Tinybit Inc.
- * @license http://opensource.org/licenses/gpl-2.0.php GPLv2
- * @link http://eastcoder.com/code/wp-multibyte-patch/
+ * @copyright Copyright (c) 2019 Seisuke Kuraishi, Tinybit Inc.
+ * @license https://opensource.org/licenses/gpl-2.0.php GPLv2
+ * @link https://eastcoder.com/code/wp-multibyte-patch/
  */
 
 /**
@@ -179,12 +179,13 @@ if ( class_exists( 'multibyte_patch' ) ) :
 			return $text;
 
 		// If the caller is wp_dashboard_recent_drafts()
-		if ( false !== $this->conf['patch_dashboard_recent_drafts'] && 10 === $num_words && is_admin() && strpos( wp_debug_backtrace_summary(), 'wp_dashboard_recent_drafts' ) )
+		if ( false !== $this->conf['patch_dashboard_recent_drafts'] && ( 40 === $num_words || 10 === $num_words ) && is_admin() && strpos( wp_debug_backtrace_summary(), 'wp_dashboard_recent_drafts' ) )
 			$num_words = $this->conf['dashboard_recent_drafts_mblength'];
 
 		$text = $original_text;
 		$text = wp_strip_all_tags( $text );
 		$text = trim( preg_replace( "/[\n\r\t ]+/", ' ', $text ), ' ' );
+		$num_words = (int) $num_words;
 
 		if ( mb_strlen( $text, $this->blog_encoding ) > $num_words )
 			$text = mb_substr( $text, 0, $num_words, $this->blog_encoding ) . $more;

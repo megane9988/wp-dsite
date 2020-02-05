@@ -3,14 +3,14 @@
 Plugin Name: VK Post Author Display
 Plugin URI: http://wordpress.org/extend/plugins/vk-post-author-display/
 Description: Show post author information at post bottom.
-Version: 1.8.3
+Version: 1.10.0
 Author: Vektor,Inc.
 Author URI: https://ex-unit.nagoya/
 Text Domain: vk-post-author-display
 Domain Path: /languages
 License: GPL2
 
-/*  Copyright 2013-2016 Hidekazu Ishikawa ( email : kurudrive@gmail.com )
+/*  Copyright 2013-2019 Hidekazu Ishikawa ( email : kurudrive@gmail.com )
 
 		This program is free software; you can redistribute it and/or modify
 		it under the terms of the GNU General Public License, version 2, as
@@ -66,6 +66,7 @@ define( 'VK_PAD_DIR', plugin_dir_path( __FILE__ ) );
 require_once( VK_PAD_DIR . 'inc/term-color-config.php' );
 require_once( VK_PAD_DIR . 'inc/vk-admin-config.php' );
 require_once( VK_PAD_DIR . 'inc/font-awesome-config.php' );
+require_once( VK_PAD_DIR . 'inc/template-tags/template-tags-config.php' );
 require_once( VK_PAD_DIR . 'view.post-author.php' );
 require_once( VK_PAD_DIR . 'admin-profile.php' );
 require_once( VK_PAD_DIR . 'hide_controller.php' );
@@ -84,8 +85,14 @@ function pad_set_plugin_meta( $links ) {
 
 
 function pad_display_post_types() {
-	// $post_types = get_post_types( $args, $output, $operator );
-	$post_types = array( 'post' );
+	$options = pad_get_plugin_options();
+
+	// Reason of use function_exists that template tags lib was not version management.
+	if ( function_exists( 'vk_the_post_type_check_list_saved_array_convert' ) ) {
+		$post_types = vk_the_post_type_check_list_saved_array_convert( $options['post_types'] );
+	} else {
+		$post_types = array( 'post' );
+	}
 	$post_types = apply_filters( 'pad_display_post_types', $post_types );
 	return $post_types;
 }
@@ -157,6 +164,7 @@ function pad_get_default_options() {
 		'show_thumbnail'          => 'display',
 		'generate_thumbnail'      => 'yes',
 		'auto_display'            => 'yes',
+		'post_types'              => array( 'post' => 'true' ),
 	);
 	return apply_filters( 'pad_default_options', $display_author_options );
 }
@@ -183,15 +191,13 @@ function pad_get_plugin_options() {
 	// オプション値を取得（無い場合はデフォルト値を入れて設定）
 	$options = get_option( 'pad_plugin_options', $default );
 
-	// なぜか配列で値が入ってしまってる場合があるので...
-	foreach ( $options as $key => $value ) {
-		// 配列ではいっちゃってる場合はデフォルトで上書き
-		if ( is_array( $value ) ) {
-			$options[ $key ] = $default[ $key ];
-		}
-	}
-	// 後で追加された値などオプション値がちゃんと入ってない場合があるので値を再結合
 	$options = wp_parse_args( $options, $default );
+
+	// 値が空で既に保存されているものがあり、管理画面で保存値のアクティブが効かないため、
+	// 値が空の場合は display を代入して返す
+	if ( empty( $options['show_thumbnail'] ) ) {
+		$options['show_thumbnail'] = 'display';
+	}
 
 	return $options;
 }
@@ -229,12 +235,17 @@ function pad_plugin_options_validate( $input ) {
 
 	$output['author_box_title']        = wp_kses_post( $input['author_box_title'] );
 	$output['author_picture_style']    = esc_html( $input['author_picture_style'] );
-	$output['list_box_title']          = wp_kses_post( [ 'list_box_title' ] );
+	$output['list_box_title']          = wp_kses_post( $input['list_box_title'] );
 	$output['author_archive_link']     = esc_html( $input['author_archive_link'] );
-	$output['author_archive_link_txt'] = wp_kses_post( [ 'author_archive_link_txt' ] );
+	$output['author_archive_link_txt'] = wp_kses_post( $input['author_archive_link_txt'] );
 	$output['show_thumbnail']          = esc_html( $input['show_thumbnail'] );
 	$output['generate_thumbnail']      = esc_html( $input['generate_thumbnail'] );
 	$output['auto_display']            = esc_html( $input['auto_display'] );
+	if ( function_exists( 'vk_sanitize_array' ) ) {
+		$output['post_types'] = vk_sanitize_array( $input['post_types'] );
+	} else {
+		$output['post_types'] = $input['post_types'];
+	}
 
 	return apply_filters( 'pad_plugin_options_validate', $output, $input, $defaults );
 }

@@ -63,13 +63,6 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 				="_blank" class="web"><i class="' . $icon . '" aria-hidden="true"></i></a></li>';
 			}
 
-			// SNS Brand Icon
-			if ( $fa == '4.7' ) {
-				$fa_before = 'fa ';
-			} else {
-				$fa_before = 'fab ';
-			}
-
 			foreach ( $sns_array as $key => $value ) {
 				$field   = 'pad_' . $key;
 				$sns_url = get_the_author_meta( $field );
@@ -85,8 +78,13 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 				} // if ( $key == 'twitter' ){
 
 				if ( $sns_url ) {
+					if ( $fa == '4.7' ) {
+						$class = $value['icon_fa4'];
+					} else {
+						$class = $value['icon_fa5'];
+					}
 					$sns_icons .= '<li class="pad_' . $key . '"><a href="' . esc_url( $sns_url ) . '" target
-					="_blank" class="' . $key . '"><i class="' . $fa_before . $value['icon'] . '" aria-hidden="true"></i></a></li>';
+					="_blank" class="' . $key . '"><i class="' . $class . '" aria-hidden="true"></i></a></li>';
 				}
 			}
 
@@ -104,14 +102,13 @@ if ( ! class_exists( 'Vk_Post_Author_Box' ) ) {
 
 			// author entries
 			global $post;
-			$autorID    = $post->post_author;
-			$loop       = new WP_Query(
-				array(
-					'post_type'      => 'post',
-					'posts_per_page' => 4,
-					'author'         => $autorID,
-				)
+			$args       = array(
+				'post_type'      => $post->post_type,
+				'posts_per_page' => 4,
+				'author'         => $post->post_author,
 			);
+			$args       = apply_filters( 'pad_get_author_entries_args', $args );
+			$loop       = new WP_Query( $args );
 			$entryUnit  = '<div id="latestEntries">' . "\n";
 			$entryUnit .= '<h5>' . wp_kses_post( $options['list_box_title'] ) . '</h5>' . "\n";
 			if ( $options['author_archive_link'] == 'display' ) {
